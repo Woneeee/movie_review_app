@@ -3,10 +3,10 @@
 - [x] Router 설정
 - [x] 전체적인 컴포넌트 만들기
 - [x] GlobalStyled 만들기
-- [ ] Header, Footer 구성
+- [x] Header, Footer 구성
+- [x] api설정
 - [ ] Helmet
-- [ ] api설정
-- [ ] Loading 구성
+- [x] Loading 구성
 - [ ] Home 구성
 - [ ] Detail 구성
 - [ ] Person, Company, Genre, Preview 구성
@@ -20,19 +20,24 @@
 ## 설치 항목
 
 - [x] react-Router-dom
-- [ ] react-spinners
-- [ ] node-fetch
 - [x] styled-components
 - [x] styled-reset
-- [ ] google font
-- [ ] swiper
+- [x] react-icons
+- [x] google font
+- [x] react-spinners
+- [x] node-fetch
+- [x] swiper
+- [ ] helmet-async
 - [ ] font-awesome
 - [ ] react-hook-form
-- [ ] helmet-async
-- [x] react-icons
 
 ## 추가기능
 
 - 검색에서 뒤로가기 했을때 검색 내용그대로 나오게하기
 - 이미지 없는것 no image로 제작
 - 필요한 페이지 스크롤 탑적용
+
+## 질문
+
+- person preview genre company를 페이지로 만드는게 맞는건지? 혹시 모달창으로도 만들어도 가능한가?
+- 구글폰트가 적용이 안되는 이유

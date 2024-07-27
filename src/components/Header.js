@@ -5,26 +5,27 @@ import styled from "styled-components";
 import { FaRegUser } from "react-icons/fa";
 import { color, spacing } from "../GlobalStyled";
 
-const SHeader = styled.div`
+const SHeader = styled.header`
   width: 100%;
-  padding: 20px ${spacing.side};
+  padding: 15px ${spacing.side};
   display: flex;
   justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 99;
 `;
 
 const Logo = styled.div`
   a {
     color: ${color.point};
-    font-size: 26px;
-    font-weight: 600;
+    font-size: 28px;
+    font-weight: 700;
   }
 `;
 
 const Menu = styled.ul`
-  font-size: 23px;
+  font-size: 25px;
   font-weight: 600;
   display: flex;
   li {

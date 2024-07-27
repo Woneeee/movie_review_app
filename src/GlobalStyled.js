@@ -20,6 +20,8 @@ export const GlobalStyled = createGlobalStyle`
         background-color: #1d1d1d;
         color: white;
         font-family: "Noto Sans KR", sans-serif;
+        word-break: keep-all;
+        letter-spacing: -1px;
     }
 
     a{

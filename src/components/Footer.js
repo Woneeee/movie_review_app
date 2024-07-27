@@ -7,6 +7,7 @@ const SFooter = styled.div`
   align-items: center;
   border-top: 1px solid #555;
   margin-top: 200px;
+  font-size: 15px;
 `;
 
 export const Footer = () => {
