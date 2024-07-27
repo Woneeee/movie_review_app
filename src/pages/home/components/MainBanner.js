@@ -135,7 +135,7 @@ export const MainBanner = ({ data }) => {
     <Container $bgUrl={ORIGIN_URL + data.backdrop_path}>
       <BlackBg />
 
-      <span>Trending Today</span>
+      <span>Today's Trend</span>
       <h3>{data.title}</h3>
       <p>{data.overview.slice(0, 100) + "..."}</p>
       <Button>
