@@ -10,10 +10,13 @@ import { Search } from "./pages/search/Search";
 import { SignIn } from "./pages/SignIn";
 import { SignUp } from "./pages/SignUp";
 import { PageNotFound } from "./pages/PageNotFound";
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
 
 const Router = () => {
   return (
     <HashRouter>
+      <Header />
       <Routes>
         <Route path={routes.home} element={<Home />} />
         <Route path={routes.detail} element={<Detail />} />
@@ -26,6 +29,7 @@ const Router = () => {
         <Route path={routes.signup} element={<SignUp />} />
         <Route path="/*" element={<PageNotFound />} />
       </Routes>
+      <Footer />
     </HashRouter>
   );
 };
