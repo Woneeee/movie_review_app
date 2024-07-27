@@ -14,6 +14,14 @@ const SHeader = styled.header`
   top: 0;
   left: 0;
   z-index: 99;
+
+  @media screen and (max-width: 768px) {
+    padding: 15px ${spacing.moside};
+  }
+
+  @media screen and (max-width: 376px) {
+    padding: 10px ${spacing.moside};
+  }
 `;
 
 const Logo = styled.div`
@@ -21,6 +29,18 @@ const Logo = styled.div`
     color: ${color.point};
     font-size: 28px;
     font-weight: 700;
+  }
+
+  @media screen and (max-width: 768px) {
+    a {
+      font-size: 25px;
+    }
+  }
+
+  @media screen and (max-width: 376px) {
+    a {
+      font-size: 20px;
+    }
   }
 `;
 
@@ -30,6 +50,19 @@ const Menu = styled.ul`
   display: flex;
   li {
     margin-left: 40px;
+  }
+
+  @media screen and (max-width: 768px) {
+    li {
+      font-size: 23px;
+    }
+  }
+
+  @media screen and (max-width: 376px) {
+    li {
+      font-size: 18px;
+      margin-left: 20px;
+    }
   }
 `;
 

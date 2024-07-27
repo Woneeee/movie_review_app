@@ -5,9 +5,9 @@
 - [x] GlobalStyled 만들기
 - [x] Header, Footer 구성
 - [x] api설정
-- [ ] Helmet
+- [x] Helmet
 - [x] Loading 구성
-- [ ] Home 구성
+- [x] Home 구성
 - [ ] Detail 구성
 - [ ] Person, Company, Genre, Preview 구성
 - [ ] SignIn, Signup 구성
@@ -27,7 +27,7 @@
 - [x] react-spinners
 - [x] node-fetch
 - [x] swiper
-- [ ] helmet-async
+- [x] helmet-async
 - [ ] font-awesome
 - [ ] react-hook-form
 
@@ -36,9 +36,11 @@
 - 검색에서 뒤로가기 했을때 검색 내용그대로 나오게하기
 - 이미지 없는것 no image로 제작
 - 필요한 페이지 스크롤 탑적용
+- 메인베너에 상세정보 버튼만들기
 
 ## 질문
 
-- person preview genre company를 페이지로 만드는게 맞는건지? 혹시 모달창으로도 만들어도 가능한가?
+- person preview genre company를 루터페이지로 만드는게 맞는건지? 혹시 모달창으로도 만들어도 가능한가?
 - 구글폰트가 적용이 안되는 이유
-- 홈에 포스터 사진 동그랗게 만드는법
+- 홈에 포스터 사진 동그랗게 만드는법, 포스터크기 조절
+- 메인베너 랜덤하게

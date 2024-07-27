@@ -14,6 +14,7 @@ import { Loading } from "../../components/Loading";
 import { MainBanner } from "./components/MainBanner";
 import "swiper/css";
 import { Contents } from "./components/Contents";
+import { Title } from "../../components/Title";
 
 export const Home = () => {
   const [trdData, setTrdData] = useState();
@@ -72,6 +73,7 @@ export const Home = () => {
         <Loading />
       ) : (
         <>
+          <Title titleName="HOME" />
           <MainBanner data={trdData[0]} />
 
           <Contents title="상영 영화" movieData={nowData} />

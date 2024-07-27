@@ -7,6 +7,7 @@ export const color = {
 
 export const spacing = {
   side: "80px",
+  moside: "20px",
 };
 
 export const GlobalStyled = createGlobalStyle`
