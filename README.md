@@ -2,7 +2,7 @@
 
 - [x] Router 설정
 - [x] 전체적인 컴포넌트 만들기
-- [ ] GlobalStyled 만들기
+- [x] GlobalStyled 만들기
 - [ ] Header, Footer 구성
 - [ ] Helmet
 - [ ] api설정
@@ -22,13 +22,14 @@
 - [x] react-Router-dom
 - [ ] react-spinners
 - [ ] node-fetch
-- [ ] styled-components
-- [ ] styled-reset
+- [x] styled-components
+- [x] styled-reset
+- [ ] google font
 - [ ] swiper
 - [ ] font-awesome
 - [ ] react-hook-form
 - [ ] helmet-async
-- [ ] react-icons
+- [x] react-icons
 
 ## 추가기능
 

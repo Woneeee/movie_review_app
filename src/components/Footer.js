@@ -1,3 +1,14 @@
+import styled from "styled-components";
+
+const SFooter = styled.div`
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #555;
+  margin-top: 200px;
+`;
+
 export const Footer = () => {
-  return <div>Footer</div>;
+  return <SFooter>&copy; Woneeee 2024</SFooter>;
 };
