@@ -2,11 +2,11 @@
 
 - [x] Router 설정
 - [x] 전체적인 컴포넌트 만들기
+- [ ] GlobalStyled 만들기
 - [ ] Header, Footer 구성
-- [ ] Loading 구성
 - [ ] Helmet
 - [ ] api설정
-- [ ] GlobalStyled 만들기
+- [ ] Loading 구성
 - [ ] Home 구성
 - [ ] Detail 구성
 - [ ] Person, Company, Genre, Preview 구성
@@ -19,9 +19,9 @@
 
 ## 설치 항목
 
-- [ ] react-Router-dom
-- [ ] node-fetch
+- [x] react-Router-dom
 - [ ] react-spinners
+- [ ] node-fetch
 - [ ] styled-components
 - [ ] styled-reset
 - [ ] swiper
