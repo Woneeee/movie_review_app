@@ -28,3 +28,15 @@ export const topRated = () =>
 
 export const upcoming = () =>
   fetch(url("movie/upcoming"), options).then((res) => res.json());
+
+export const trendingTv = () =>
+  fetch(url("trending/tv/day"), options).then((res) => res.json());
+
+export const onAir = () =>
+  fetch(url("tv/on_the_air"), options).then((res) => res.json());
+
+export const popTv = () =>
+  fetch(url("tv/popular"), options).then((res) => res.json());
+
+export const topTv = () =>
+  fetch(url("tv/top_rated"), options).then((res) => res.json());

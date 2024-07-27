@@ -3,9 +3,10 @@ import { spacing } from "../../../GlobalStyled";
 import { W500_URL } from "../../../constant/imgUrl";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 const Container = styled.div`
-  padding: 100px 0 0 ${spacing.side};
+  padding: 50px 0 50px ${spacing.side};
 `;
 
 const STitle = styled.div`
@@ -14,7 +15,7 @@ const STitle = styled.div`
   margin-bottom: 30px;
 `;
 
-export const Movies = ({ title, movieData }) => {
+export const Contents = ({ title, movieData }) => {
   return (
     <Container>
       <STitle>{title}</STitle>
