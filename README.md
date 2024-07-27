@@ -1,9 +1,9 @@
 ## TODO LIST
 
-- [ ] Router 설정
-- [ ] 전체적인 컴포넌트 만들기
-- [ ] Loading 구성
+- [x] Router 설정
+- [x] 전체적인 컴포넌트 만들기
 - [ ] Header, Footer 구성
+- [ ] Loading 구성
 - [ ] Helmet
 - [ ] api설정
 - [ ] GlobalStyled 만들기
