@@ -1,5 +1,11 @@
 import { useEffect, useState } from "react";
-import { keywordMovie, movieDetail, recomMovie, similarMovie } from "../../api";
+import {
+  keywordMovie,
+  movieDetail,
+  previewMovie,
+  recomMovie,
+  similarMovie,
+} from "../../api";
 import { Loading } from "../../components/Loading";
 import styled from "styled-components";
 import { ORIGIN_URL, W500_URL } from "../../constant/imgUrl";
@@ -20,7 +26,7 @@ const ConWrap = styled.div`
 `;
 
 const PosterWrap = styled.div`
-  width: 46%;
+  width: 47%;
   /* height: 730px; */
   img {
     height: 100%;
@@ -29,7 +35,7 @@ const PosterWrap = styled.div`
 `;
 
 const InfoWrap = styled.div`
-  width: 48%;
+  width: 47%;
 
   h3 {
     font-size: 65px;
@@ -61,7 +67,7 @@ const Genres = styled.div`
 `;
 
 const Keyword = styled.div`
-  margin-top: 20px;
+  margin-top: 30px;
   font-size: 17px;
   p {
     margin-right: 10px;
@@ -77,7 +83,7 @@ const Desc = styled.div`
   font-size: 18px;
   font-weight: 300;
   opacity: 0.7;
-  margin-top: 70px;
+  margin-top: 60px;
   line-height: 30px;
   letter-spacing: 0;
 `;
@@ -106,10 +112,20 @@ const Con = styled.div`
   }
 `;
 
+const Video = styled.div`
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+`;
+
 export const MovieDetail = () => {
   const [detail, setDetail] = useState();
   const [recomData, setRecomData] = useState();
   const [keyData, setKeyData] = useState();
+  const [videoData, setVideoData] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const { id: movieId } = useParams();
   // console.log(movieId);
@@ -120,10 +136,12 @@ export const MovieDetail = () => {
         const data = await movieDetail(movieId);
         const { keywords } = await keywordMovie(movieId);
         const { results: recomResult } = await recomMovie(movieId);
+        const { results: videoResult } = await previewMovie(movieId);
 
         setDetail(data);
         setKeyData(keywords);
         setRecomData(recomResult);
+        setVideoData(videoResult);
         setIsLoading(false);
       } catch (error) {
         console.log(error);
@@ -132,8 +150,9 @@ export const MovieDetail = () => {
   }, [movieId]);
 
   // console.log(detail);
-  console.log(keyData);
+  // console.log(keyData);
   // console.log(recomData);
+  // console.log(videoData);
   // console.log(isLoading);
 
   return (
@@ -167,7 +186,7 @@ export const MovieDetail = () => {
 
                 <Keyword>
                   {keyData.map((key) => (
-                    <Link to={`/keyword/${key.id}`}>
+                    <Link key={key.id} to={`/keyword/${key.id}`}>
                       <p>{key.name}</p>
                     </Link>
                   ))}
@@ -195,6 +214,19 @@ export const MovieDetail = () => {
               </Wrap>
             </Recommand>
           )}
+
+          <Video>
+            <iframe
+              width="1025"
+              height="580"
+              src={`https://www.youtube.com/embed/${videoData[0].key}?si=naDiGR7aPy8NbSOf`}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+          </Video>
         </>
       )}
     </>

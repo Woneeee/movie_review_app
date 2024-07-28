@@ -57,3 +57,6 @@ export const keywordRelate = (keyword_id) =>
 
 export const keyDetail = (keyword_id) =>
   fetch(url(`keyword/${keyword_id}`), options).then((res) => res.json());
+
+export const previewMovie = (movie_id) =>
+  fetch(url(`movie/${movie_id}/videos`), options).then((res) => res.json());
