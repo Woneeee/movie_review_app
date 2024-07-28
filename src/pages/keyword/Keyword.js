@@ -58,7 +58,7 @@ export const Keyword = () => {
         <Loading />
       ) : (
         <>
-          <Title titleName="KEYWORD" />
+          <Title titleName={keyNameData} />
 
           <STitle>{keyNameData} 이야기</STitle>
 
