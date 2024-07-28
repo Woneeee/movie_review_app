@@ -2,9 +2,8 @@ export const routes = {
   home: "/",
 
   moviedetail: "/moviedetail/:id",
-  genre: "/genre/:id",
+  keyword: "/keyword/:id",
   person: "/person/:id",
-  company: "/company/:id",
   preview: "/preview/:id",
 
   search: "/search",

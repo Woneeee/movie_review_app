@@ -1,9 +1,8 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
 import { routes } from "./routes";
 import { Home } from "./pages/home/Home";
-import { Genre } from "./pages/genre/Genre";
+import { Keyword } from "./pages/keyword/Keyword";
 import { Person } from "./pages/person/Person";
-import { Company } from "./pages/company/Company";
 import { Preview } from "./pages/preview/Preview";
 import { Search } from "./pages/search/Search";
 import { SignIn } from "./pages/SignIn";
@@ -20,9 +19,8 @@ const Router = () => {
       <Routes>
         <Route path={routes.home} element={<Home />} />
         <Route path={routes.moviedetail} element={<MovieDetail />} />
-        <Route path={routes.genre} element={<Genre />} />
+        <Route path={routes.keyword} element={<Keyword />} />
         <Route path={routes.person} element={<Person />} />
-        <Route path={routes.company} element={<Company />} />
         <Route path={routes.preview} element={<Preview />} />
         <Route path={routes.search} element={<Search />} />
         <Route path={routes.signin} element={<SignIn />} />

@@ -43,3 +43,17 @@ export const topTv = () =>
 
 export const movieDetail = (movie_id) =>
   fetch(url(`movie/${movie_id}`), options).then((res) => res.json());
+
+export const keywordMovie = (movie_id) =>
+  fetch(url(`movie/${movie_id}/keywords`), options).then((res) => res.json());
+
+export const recomMovie = (movie_id) =>
+  fetch(url(`movie/${movie_id}/recommendations`), options).then((res) =>
+    res.json()
+  );
+
+export const keywordRelate = (keyword_id) =>
+  fetch(url(`keyword/${keyword_id}/movies`), options).then((res) => res.json());
+
+export const keyDetail = (keyword_id) =>
+  fetch(url(`keyword/${keyword_id}`), options).then((res) => res.json());

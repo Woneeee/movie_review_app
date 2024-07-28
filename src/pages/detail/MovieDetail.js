@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { movieDetail } from "../../api";
+import { keywordMovie, movieDetail, recomMovie, similarMovie } from "../../api";
 import { Loading } from "../../components/Loading";
 import styled from "styled-components";
-import { ORIGIN_URL } from "../../constant/imgUrl";
+import { ORIGIN_URL, W500_URL } from "../../constant/imgUrl";
 import { Title } from "../../components/Title";
 import { Link, useParams } from "react-router-dom";
+import { spacing } from "../../GlobalStyled";
 
 const Container = styled.div`
   display: flex;
@@ -12,14 +13,15 @@ const Container = styled.div`
 `;
 
 const ConWrap = styled.div`
-  width: 900px;
+  width: 1100px;
   display: flex;
   justify-content: space-between;
-  margin-top: 130px;
+  margin-top: 140px;
 `;
 
 const PosterWrap = styled.div`
-  width: 45%;
+  width: 46%;
+  /* height: 730px; */
   img {
     height: 100%;
     object-fit: cover;
@@ -27,7 +29,7 @@ const PosterWrap = styled.div`
 `;
 
 const InfoWrap = styled.div`
-  width: 50%;
+  width: 48%;
 
   h3 {
     font-size: 65px;
@@ -58,26 +60,70 @@ const Genres = styled.div`
   }
 `;
 
+const Keyword = styled.div`
+  margin-top: 20px;
+  font-size: 17px;
+  p {
+    margin-right: 10px;
+    display: inline-block;
+    line-height: 22px;
+  }
+  p:hover {
+    text-decoration: underline;
+  }
+`;
+
 const Desc = styled.div`
   font-size: 18px;
   font-weight: 300;
   opacity: 0.7;
   margin-top: 70px;
   line-height: 30px;
+  letter-spacing: 0;
+`;
+
+const Recommand = styled.div`
+  margin-top: 80px;
+  padding: 0 ${spacing.side};
+  h3 {
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 25px;
+  }
+`;
+
+const Wrap = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 40px;
+  column-gap: 100px;
+`;
+
+const Con = styled.div`
+  height: 500px;
+  img {
+    height: 100%;
+  }
 `;
 
 export const MovieDetail = () => {
   const [detail, setDetail] = useState();
+  const [recomData, setRecomData] = useState();
+  const [keyData, setKeyData] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const { id: movieId } = useParams();
-  console.log(movieId);
+  // console.log(movieId);
 
   useEffect(() => {
     (async () => {
       try {
         const data = await movieDetail(movieId);
+        const { keywords } = await keywordMovie(movieId);
+        const { results: recomResult } = await recomMovie(movieId);
 
         setDetail(data);
+        setKeyData(keywords);
+        setRecomData(recomResult);
         setIsLoading(false);
       } catch (error) {
         console.log(error);
@@ -85,7 +131,9 @@ export const MovieDetail = () => {
     })();
   }, [movieId]);
 
-  console.log(detail);
+  // console.log(detail);
+  console.log(keyData);
+  // console.log(recomData);
   // console.log(isLoading);
 
   return (
@@ -93,33 +141,61 @@ export const MovieDetail = () => {
       {isLoading ? (
         <Loading />
       ) : (
-        <Container>
+        <>
           <Title titleName={detail.title} />
-          <ConWrap>
-            <PosterWrap>
-              <img src={ORIGIN_URL + detail.poster_path} alt="" />
-            </PosterWrap>
+          <Container>
+            <ConWrap>
+              <PosterWrap>
+                <img src={ORIGIN_URL + detail.poster_path} alt="" />
+              </PosterWrap>
 
-            <InfoWrap>
-              <h3>{detail.title}</h3>
-              <Info>
-                <span>{detail.release_date}</span>
+              <InfoWrap>
+                <h3>{detail.title}</h3>
+                <Info>
+                  <span>{detail.release_date}</span>
 
-                <span>{Math.round(detail.vote_average)}점</span>
+                  <span>{Math.round(detail.vote_average)}점</span>
 
-                <span>{detail.runtime}분</span>
-              </Info>
+                  <span>{detail.runtime}분</span>
+                </Info>
 
-              <Genres>
-                {detail.genres.map((gene) => (
-                  <li key={gene.id}>{gene.name}</li>
+                <Genres>
+                  {detail.genres.map((gene) => (
+                    <li key={gene.id}>{gene.name}</li>
+                  ))}
+                </Genres>
+
+                <Keyword>
+                  {keyData.map((key) => (
+                    <Link to={`/keyword/${key.id}`}>
+                      <p>{key.name}</p>
+                    </Link>
+                  ))}
+                </Keyword>
+
+                <Desc>{detail.overview.slice(0, 600)}</Desc>
+              </InfoWrap>
+            </ConWrap>
+          </Container>
+
+          {recomData && (
+            <Recommand>
+              <h3>
+                {detail.title} 를 좋아하신다면 ?? 🤔 이 영화도 추천해드릴게요!
+              </h3>
+
+              <Wrap>
+                {recomData.map((data) => (
+                  <Link to={`/moviedetail/${data.id}`} key={data.id}>
+                    <Con>
+                      <img src={W500_URL + data.poster_path} alt={data.title} />
+                    </Con>
+                  </Link>
                 ))}
-              </Genres>
-
-              <Desc>{detail.overview}</Desc>
-            </InfoWrap>
-          </ConWrap>
-        </Container>
+              </Wrap>
+            </Recommand>
+          )}
+        </>
       )}
     </>
   );
