@@ -8,8 +8,8 @@
 - [x] Helmet
 - [x] Loading 구성
 - [x] Home 구성
-- [ ] Detail 구성
-- [ ] Person, Company, Genre, Preview 구성
+- [x] Detail 구성
+- [ ] Person, Preview 구성
 - [ ] SignIn, Signup 구성
 - [ ] Search 구성
 - [ ] 반응형
@@ -28,7 +28,7 @@
 - [x] node-fetch
 - [x] swiper
 - [x] helmet-async
-- [ ] font-awesome
+- [x] font-awesome
 - [ ] react-hook-form
 
 ## 추가기능
@@ -40,7 +40,7 @@
 
 ## 질문
 
-- person preview genre company를 루터페이지로 만드는게 맞는건지? 혹시 모달창으로도 만들어도 가능한가?
 - 구글폰트가 적용이 안되는 이유
 - 홈에 포스터 사진 동그랗게 만드는법, 포스터크기 조절
 - 메인베너 랜덤하게
+- 무비스 컴포넌트 페이지네이션

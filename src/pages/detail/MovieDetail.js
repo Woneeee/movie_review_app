@@ -83,7 +83,7 @@ export const MovieDetail = () => {
         console.log(error);
       }
     })();
-  }, []);
+  }, [movieId]);
 
   console.log(detail);
   // console.log(isLoading);
