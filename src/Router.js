@@ -1,7 +1,6 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
 import { routes } from "./routes";
 import { Home } from "./pages/home/Home";
-import { Detail } from "./pages/detail/Detail";
 import { Genre } from "./pages/genre/Genre";
 import { Person } from "./pages/person/Person";
 import { Company } from "./pages/company/Company";
@@ -12,6 +11,7 @@ import { SignUp } from "./pages/SignUp";
 import { PageNotFound } from "./pages/PageNotFound";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
+import { MovieDetail } from "./pages/detail/MovieDetail";
 
 const Router = () => {
   return (
@@ -19,7 +19,7 @@ const Router = () => {
       <Header />
       <Routes>
         <Route path={routes.home} element={<Home />} />
-        <Route path={routes.detail} element={<Detail />} />
+        <Route path={routes.moviedetail} element={<MovieDetail />} />
         <Route path={routes.genre} element={<Genre />} />
         <Route path={routes.person} element={<Person />} />
         <Route path={routes.company} element={<Company />} />

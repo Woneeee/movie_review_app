@@ -1,7 +1,7 @@
 export const routes = {
   home: "/",
 
-  detail: "/detail/:id",
+  moviedetail: "/moviedetail/:id",
   genre: "/genre/:id",
   person: "/person/:id",
   company: "/company/:id",

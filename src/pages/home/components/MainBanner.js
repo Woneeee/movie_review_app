@@ -7,7 +7,7 @@ const Container = styled.section`
   height: 83vh;
   background: url(${(props) => props.$bgUrl}) no-repeat center / cover;
   position: relative;
-  padding: 450px ${spacing.side} 0 ${spacing.side};
+  padding: 19% ${spacing.side} 0 ${spacing.side};
 
   span {
     width: 130px;
@@ -40,7 +40,7 @@ const Container = styled.section`
 
   @media screen and (max-width: 768px) {
     height: 70vh;
-    padding: 450px ${spacing.moside} 0 ${spacing.moside};
+    padding: 42% ${spacing.moside} 0 ${spacing.moside};
 
     h3 {
       font-size: 40px;
@@ -56,7 +56,7 @@ const Container = styled.section`
 
   @media screen and (max-width: 376px) {
     height: 60vh;
-    padding: 200px ${spacing.moside} 0 ${spacing.moside};
+    padding: 52% ${spacing.moside} 0 ${spacing.moside};
     span {
       font-size: 13px;
       width: 90px;
@@ -139,7 +139,7 @@ export const MainBanner = ({ data }) => {
       <h3>{data.title}</h3>
       <p>{data.overview.slice(0, 100) + "..."}</p>
       <Button>
-        <Link to={`/detail/${data.id}`}>상세 정보</Link>
+        <Link to={`/moviedetail/${data.id}`}>상세 정보</Link>
       </Button>
     </Container>
   );

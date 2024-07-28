@@ -22,7 +22,6 @@ export const Home = () => {
   const [popData, setPopData] = useState();
   const [topData, setTopData] = useState();
   const [upData, setUpData] = useState();
-  const [airingData, setAiringData] = useState();
   const [trdTvData, setTrdTvData] = useState();
   const [onAirData, setOnAirData] = useState();
   const [popTvData, setPopTvData] = useState();

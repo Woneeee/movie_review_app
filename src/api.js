@@ -40,3 +40,6 @@ export const popTv = () =>
 
 export const topTv = () =>
   fetch(url("tv/top_rated"), options).then((res) => res.json());
+
+export const movieDetail = (movie_id) =>
+  fetch(url(`movie/${movie_id}`), options).then((res) => res.json());
