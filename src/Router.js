@@ -2,7 +2,6 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 import { routes } from "./routes";
 import { Home } from "./pages/home/Home";
 import { Keyword } from "./pages/keyword/Keyword";
-import { Person } from "./pages/person/Person";
 import { Preview } from "./pages/preview/Preview";
 import { Search } from "./pages/search/Search";
 import { SignIn } from "./pages/SignIn";

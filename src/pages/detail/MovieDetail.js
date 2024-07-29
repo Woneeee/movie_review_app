@@ -111,6 +111,7 @@ const Con = styled.div`
   height: 500px;
   img {
     height: 100%;
+    object-fit: cover;
   }
 `;
 
@@ -120,7 +121,7 @@ const Video = styled.div`
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  /* display: none; */
+  display: none;
 `;
 
 const Close = styled.button`

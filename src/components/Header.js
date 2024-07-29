@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { routes } from "../routes";
-import { FiSearch } from "react-icons/fi";
 import styled from "styled-components";
 import { FaRegUser } from "react-icons/fa";
 import { color, spacing } from "../GlobalStyled";
+import { BsSearch } from "react-icons/bs";
 
 const SHeader = styled.header`
   width: 100%;
@@ -76,7 +76,7 @@ export const Header = () => {
       <Menu>
         <li>
           <Link to={routes.search}>
-            <FiSearch />
+            <BsSearch />
           </Link>
         </li>
 
