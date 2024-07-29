@@ -91,12 +91,12 @@ const Desc = styled.div`
 `;
 
 const Recommand = styled.div`
-  margin-top: 80px;
+  margin-top: 150px;
   padding: 0 ${spacing.side};
   h3 {
     font-size: 30px;
     font-weight: 400;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
   }
 `;
 

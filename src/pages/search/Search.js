@@ -58,6 +58,8 @@ const Con = styled.div`
   }
 `;
 
+const Wrap = styled.div``;
+
 export const Search = () => {
   const [searchData, setSearchData] = useState();
   const [personData, setPersonData] = useState();
@@ -113,30 +115,19 @@ export const Search = () => {
                   </Con>
                 </Link>
               ))}
+              {personData.map((person) => (
+                <Link to={`/moviedetail/${person.known_for[0].id}`}>
+                  <Con>
+                    <img
+                      src={W500_URL + person.known_for[0].poster_path}
+                      alt={person.known_for[0].title}
+                    />
+                  </Con>
+                </Link>
+              ))}
             </ConWrap>
           )}
         </>
-      )}
-
-      {personData && (
-        <ConWrap>
-          {personData.map((person) => (
-            <Link
-              to={`/moviedetail/${person.known_for.map((movie) => movie.id)}`}
-              key={person.known_for.map((movie) => movie.id)}
-            >
-              <Con>
-                <img
-                  src={
-                    W500_URL +
-                    person.known_for.map((movie) => movie.poster_path)
-                  }
-                  alt={person.known_for.map((movie) => movie.title)}
-                />
-              </Con>
-            </Link>
-          ))}
-        </ConWrap>
       )}
     </Container>
   );
