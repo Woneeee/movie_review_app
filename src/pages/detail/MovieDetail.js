@@ -12,6 +12,7 @@ import { ORIGIN_URL, W500_URL } from "../../constant/imgUrl";
 import { Title } from "../../components/Title";
 import { Link, useParams } from "react-router-dom";
 import { spacing } from "../../GlobalStyled";
+import { useScrollTop } from "../../lib/useScrollTop";
 
 const Container = styled.div`
   display: flex;
@@ -73,6 +74,7 @@ const Keyword = styled.div`
     margin-right: 10px;
     display: inline-block;
     line-height: 22px;
+    letter-spacing: 0;
   }
   p:hover {
     text-decoration: underline;
@@ -118,10 +120,22 @@ const Video = styled.div`
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  display: none;
+  /* display: none; */
+`;
+
+const Close = styled.button`
+  width: 30px;
+  height: 30px;
+  background-color: #555;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
 `;
 
 export const MovieDetail = () => {
+  useScrollTop();
+
   const [detail, setDetail] = useState();
   const [recomData, setRecomData] = useState();
   const [keyData, setKeyData] = useState();
@@ -155,6 +169,8 @@ export const MovieDetail = () => {
   // console.log(videoData);
   // console.log(isLoading);
 
+  const closeHandler = () => {};
+
   return (
     <>
       {isLoading ? (
@@ -165,7 +181,7 @@ export const MovieDetail = () => {
           <Container>
             <ConWrap>
               <PosterWrap>
-                <img src={ORIGIN_URL + detail.poster_path} alt="" />
+                <img src={ORIGIN_URL + detail.poster_path} alt={detail.title} />
               </PosterWrap>
 
               <InfoWrap>
@@ -215,18 +231,22 @@ export const MovieDetail = () => {
             </Recommand>
           )}
 
-          <Video>
-            <iframe
-              width="1025"
-              height="580"
-              src={`https://www.youtube.com/embed/${videoData[0].key}?si=naDiGR7aPy8NbSOf`}
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            ></iframe>
-          </Video>
+          {videoData.length > 0 && (
+            <Video>
+              <iframe
+                width="1025"
+                height="580"
+                src={`https://www.youtube.com/embed/${videoData[0].key}?si=naDiGR7aPy8NbSOf`}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+
+              <Close onClick={closeHandler}>X</Close>
+            </Video>
+          )}
         </>
       )}
     </>
