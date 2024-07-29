@@ -66,3 +66,10 @@ export const searchMovie = (movieTitle) => {
 
   return fetch(searchUrl, options).then((res) => res.json());
 };
+
+export const searchPerson = (Person) => {
+  const personSearchUrl =
+    baseUrl + `search/person?query=${Person}&language=ko-kr`;
+
+  return fetch(personSearchUrl, options).then((res) => res.json());
+};

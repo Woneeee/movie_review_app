@@ -108,7 +108,7 @@ const Wrap = styled.div`
 `;
 
 const Con = styled.div`
-  height: 500px;
+  height: 540px;
   img {
     height: 100%;
     object-fit: cover;
