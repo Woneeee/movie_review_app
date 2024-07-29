@@ -39,12 +39,16 @@ export const Keyword = () => {
 
   useEffect(() => {
     (async () => {
-      const { results } = await keywordRelate(keyword_id);
-      const { name } = await keyDetail(keyword_id);
+      try {
+        const { results } = await keywordRelate(keyword_id);
+        const { name } = await keyDetail(keyword_id);
 
-      setKeyData(results);
-      setKeyNameData(name);
-      setIsLoading(false);
+        setKeyData(results);
+        setKeyNameData(name);
+        setIsLoading(false);
+      } catch (error) {
+        console.log(error);
+      }
     })();
   }, [keyword_id]);
 
