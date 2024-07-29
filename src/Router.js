@@ -20,7 +20,6 @@ const Router = () => {
         <Route path={routes.home} element={<Home />} />
         <Route path={routes.moviedetail} element={<MovieDetail />} />
         <Route path={routes.keyword} element={<Keyword />} />
-        <Route path={routes.person} element={<Person />} />
         <Route path={routes.preview} element={<Preview />} />
         <Route path={routes.search} element={<Search />} />
         <Route path={routes.signin} element={<SignIn />} />
