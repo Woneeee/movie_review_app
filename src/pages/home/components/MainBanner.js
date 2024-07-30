@@ -7,7 +7,7 @@ const Container = styled.section`
   height: 83vh;
   background: url(${(props) => props.$bgUrl}) no-repeat center / cover;
   position: relative;
-  padding: 20% ${spacing.side} 0 ${spacing.side};
+  padding: 450px ${spacing.side} 0 ${spacing.side};
 
   span {
     width: 130px;
@@ -40,7 +40,7 @@ const Container = styled.section`
 
   @media screen and (max-width: 768px) {
     height: 70vh;
-    padding: 42% ${spacing.moside} 0 ${spacing.moside};
+    padding: 450px ${spacing.moside} 0 ${spacing.moside};
 
     h3 {
       font-size: 40px;

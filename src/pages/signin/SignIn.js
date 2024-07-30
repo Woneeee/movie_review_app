@@ -9,8 +9,11 @@ import {
   ErrorMessage,
 } from "./components/SignStyle";
 import { Title } from "../../components/Title";
+import { useScrollTop } from "../../lib/useScrollTop";
 
 export const SignIn = () => {
+  useScrollTop();
+
   const {
     register,
     handleSubmit,

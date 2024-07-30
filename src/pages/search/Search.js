@@ -62,7 +62,6 @@ const Wrap = styled.div``;
 
 export const Search = () => {
   const [searchData, setSearchData] = useState();
-  const [personData, setPersonData] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
   const {
@@ -73,15 +72,12 @@ export const Search = () => {
 
   const searchHandler = async ({ searchWord }) => {
     const { results } = await searchMovie(searchWord);
-    const { results: personResult } = await searchPerson(searchWord);
 
     setSearchData(results);
-    setPersonData(personResult);
     setIsLoading(false);
   };
 
   // console.log(searchData);
-  console.log(personData);
   // console.log(isLoading);
 
   return (
@@ -112,16 +108,6 @@ export const Search = () => {
                 <Link to={`/moviedetail/${res.id}`} key={res.id}>
                   <Con>
                     <img src={W500_URL + res.poster_path} alt={res.title} />
-                  </Con>
-                </Link>
-              ))}
-              {personData.map((person) => (
-                <Link to={`/moviedetail/${person.known_for[0].id}`}>
-                  <Con>
-                    <img
-                      src={W500_URL + person.known_for[0].poster_path}
-                      alt={person.known_for[0].title}
-                    />
                   </Con>
                 </Link>
               ))}

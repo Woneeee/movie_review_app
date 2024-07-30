@@ -10,8 +10,11 @@ import { Link, useNavigate } from "react-router-dom";
 import { routes } from "../../routes";
 import styled from "styled-components";
 import { Title } from "../../components/Title";
+import { useScrollTop } from "../../lib/useScrollTop";
 
 export const SignUp = () => {
+  useScrollTop();
+
   const {
     register,
     handleSubmit,
