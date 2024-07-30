@@ -2,13 +2,12 @@ import { useEffect, useState } from "react";
 import { keywordMovie, movieDetail, previewMovie, recomMovie } from "../../api";
 import { Loading } from "../../components/Loading";
 import styled from "styled-components";
-import { ORIGIN_URL, W500_URL } from "../../constant/imgUrl";
+import { W500_URL } from "../../constant/imgUrl";
 import { Title } from "../../components/Title";
 import { Link, useParams } from "react-router-dom";
 import { useScrollTop } from "../../lib/useScrollTop";
 import { FaPlay } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
-import { color } from "../../GlobalStyled";
 
 const Container = styled.div`
   display: flex;
@@ -127,11 +126,10 @@ const Con = styled.div`
 
 const Video = styled.div`
   /* background-color: #222; */
-  display: block;
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -60%);
   display: ${(props) => props.$playActive};
 `;
 
