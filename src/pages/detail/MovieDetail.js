@@ -1,18 +1,14 @@
 import { useEffect, useState } from "react";
-import {
-  keywordMovie,
-  movieDetail,
-  previewMovie,
-  recomMovie,
-  similarMovie,
-} from "../../api";
+import { keywordMovie, movieDetail, previewMovie, recomMovie } from "../../api";
 import { Loading } from "../../components/Loading";
 import styled from "styled-components";
 import { ORIGIN_URL, W500_URL } from "../../constant/imgUrl";
 import { Title } from "../../components/Title";
 import { Link, useParams } from "react-router-dom";
-import { spacing } from "../../GlobalStyled";
 import { useScrollTop } from "../../lib/useScrollTop";
+import { FaPlay } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
+import { color } from "../../GlobalStyled";
 
 const Container = styled.div`
   display: flex;
@@ -56,6 +52,20 @@ const Info = styled.div`
     font-weight: 400;
     margin-right: 15px;
   }
+`;
+
+const Button = styled.div`
+  all: unset;
+  width: 90px;
+  margin-left: 50px;
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 `;
 
 const Genres = styled.div`
@@ -116,22 +126,27 @@ const Con = styled.div`
 `;
 
 const Video = styled.div`
+  /* background-color: #222; */
   display: block;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  display: none;
+  display: ${(props) => props.$playActive};
 `;
 
 const Close = styled.button`
-  width: 30px;
-  height: 30px;
-  background-color: #555;
-  position: absolute;
-  top: 0;
-  right: 0;
+  all: unset;
+  width: 40px;
+  height: 40px;
+  border: 1px solid white;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  margin: 20px auto;
+  cursor: pointer;
 `;
 
 export const MovieDetail = () => {
@@ -170,7 +185,19 @@ export const MovieDetail = () => {
   // console.log(videoData);
   // console.log(isLoading);
 
-  const closeHandler = () => {};
+  const [show, setShow] = useState(false);
+
+  const playHandler = () => {
+    if (!show) {
+      setShow(true);
+    }
+  };
+
+  const closeHandler = () => {
+    if (show) {
+      setShow(false);
+    }
+  };
 
   return (
     <>
@@ -182,7 +209,7 @@ export const MovieDetail = () => {
           <Container>
             <ConWrap>
               <PosterWrap>
-                <img src={ORIGIN_URL + detail.poster_path} alt={detail.title} />
+                <img src={W500_URL + detail.poster_path} alt={detail.title} />
               </PosterWrap>
 
               <InfoWrap>
@@ -193,6 +220,11 @@ export const MovieDetail = () => {
                   <span>{Math.round(detail.vote_average)}점</span>
 
                   <span>{detail.runtime}분</span>
+
+                  <Button onClick={playHandler}>
+                    <FaPlay />
+                    재생
+                  </Button>
                 </Info>
 
                 <Genres>
@@ -233,7 +265,11 @@ export const MovieDetail = () => {
           )}
 
           {videoData.length > 0 && (
-            <Video>
+            <Video $playActive={show ? "block" : "none"}>
+              <Close onClick={closeHandler}>
+                <IoClose />
+              </Close>
+
               <iframe
                 width="1025"
                 height="580"
@@ -244,8 +280,6 @@ export const MovieDetail = () => {
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
               ></iframe>
-
-              <Close onClick={closeHandler}>X</Close>
             </Video>
           )}
         </>
