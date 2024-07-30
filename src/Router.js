@@ -2,7 +2,6 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 import { routes } from "./routes";
 import { Home } from "./pages/home/Home";
 import { Keyword } from "./pages/keyword/Keyword";
-import { Preview } from "./pages/preview/Preview";
 import { Search } from "./pages/search/Search";
 import { SignIn } from "./pages/signin/SignIn";
 import { SignUp } from "./pages/signup/SignUp";
@@ -19,7 +18,6 @@ const Router = () => {
         <Route path={routes.home} element={<Home />} />
         <Route path={routes.moviedetail} element={<MovieDetail />} />
         <Route path={routes.keyword} element={<Keyword />} />
-        <Route path={routes.preview} element={<Preview />} />
         <Route path={routes.search} element={<Search />} />
         <Route path={routes.signin} element={<SignIn />} />
         <Route path={routes.signup} element={<SignUp />} />

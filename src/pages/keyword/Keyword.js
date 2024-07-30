@@ -25,7 +25,7 @@ const Container = styled.div`
 const ConWrap = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  row-gap: 40px;
+  row-gap: 30px;
   column-gap: 20px;
 `;
 
