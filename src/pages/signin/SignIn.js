@@ -8,6 +8,7 @@ import {
   GoSIgnUp,
   ErrorMessage,
 } from "./components/SignStyle";
+import { Title } from "../../components/Title";
 
 export const SignIn = () => {
   const {
@@ -27,6 +28,7 @@ export const SignIn = () => {
 
   return (
     <Container>
+      <Title titleName="SIGNIN" />
       <BackBG />
 
       <Form onSubmit={handleSubmit(loginHandler)}>

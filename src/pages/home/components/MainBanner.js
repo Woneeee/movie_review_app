@@ -7,7 +7,7 @@ const Container = styled.section`
   height: 83vh;
   background: url(${(props) => props.$bgUrl}) no-repeat center / cover;
   position: relative;
-  padding: 19% ${spacing.side} 0 ${spacing.side};
+  padding: 20% ${spacing.side} 0 ${spacing.side};
 
   span {
     width: 130px;
@@ -84,8 +84,7 @@ const BlackBg = styled.div`
     0deg,
     rgba(0, 0, 0, 1) 0%,
     rgba(0, 0, 0, 0.6111694677871149) 45%,
-    rgba(255, 255, 255, 0) 94%,
-    rgba(0, 0, 0, 0.7) 100%
+    rgba(255, 255, 255, 0) 100%
   );
   position: absolute;
   top: 0;

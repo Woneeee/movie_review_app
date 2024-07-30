@@ -9,6 +9,7 @@ import {
 import { Link, useNavigate } from "react-router-dom";
 import { routes } from "../../routes";
 import styled from "styled-components";
+import { Title } from "../../components/Title";
 
 export const SignUp = () => {
   const {
@@ -26,6 +27,8 @@ export const SignUp = () => {
 
   return (
     <Container>
+      <Title titleName="SIGNUP" />
+
       <BackBG />
 
       <Form onSubmit={handleSubmit(loginHandler)}>

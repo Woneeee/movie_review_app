@@ -7,6 +7,12 @@ import { BsSearch } from "react-icons/bs";
 
 const SHeader = styled.header`
   width: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.1966036414565826) 0%,
+    rgba(0, 0, 0, 0.02853641456582634) 0%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
   padding: 15px ${spacing.side};
   display: flex;
   justify-content: space-between;
@@ -70,7 +76,7 @@ export const Header = () => {
   return (
     <SHeader>
       <Logo>
-        <Link to={routes.home}>MOVIE</Link>
+        <Link to={routes.home}>YEAHFLIX</Link>
       </Logo>
 
       <Menu>

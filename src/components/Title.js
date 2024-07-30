@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 export const Title = ({ titleName }) => {
   return (
     <Helmet>
-      <title>MOVIE | {titleName}</title>
+      <title>YEAHFLIX | {titleName}</title>
     </Helmet>
   );
 };
