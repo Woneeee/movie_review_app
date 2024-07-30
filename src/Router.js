@@ -4,7 +4,7 @@ import { Home } from "./pages/home/Home";
 import { Keyword } from "./pages/keyword/Keyword";
 import { Preview } from "./pages/preview/Preview";
 import { Search } from "./pages/search/Search";
-import { SignIn } from "./pages/SignIn";
+import { SignIn } from "./pages/signin/SignIn";
 import { SignUp } from "./pages/SignUp";
 import { PageNotFound } from "./pages/PageNotFound";
 import { Header } from "./components/Header";
