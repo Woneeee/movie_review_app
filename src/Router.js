@@ -5,7 +5,7 @@ import { Keyword } from "./pages/keyword/Keyword";
 import { Preview } from "./pages/preview/Preview";
 import { Search } from "./pages/search/Search";
 import { SignIn } from "./pages/signin/SignIn";
-import { SignUp } from "./pages/SignUp";
+import { SignUp } from "./pages/signup/SignUp";
 import { PageNotFound } from "./pages/PageNotFound";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";

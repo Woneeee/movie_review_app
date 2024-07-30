@@ -1,15 +1,16 @@
 import { useForm } from "react-hook-form";
-import { Link, useNavigate } from "react-router-dom";
-import { routes } from "../../routes";
 import {
   Container,
   BackBG,
   Form,
   GoSIgnUp,
   ErrorMessage,
-} from "./components/SignStyle";
+} from "../signin/components/SignStyle";
+import { Link, useNavigate } from "react-router-dom";
+import { routes } from "../../routes";
+import styled from "styled-components";
 
-export const SignIn = () => {
+export const SignUp = () => {
   const {
     register,
     handleSubmit,
@@ -19,18 +20,16 @@ export const SignIn = () => {
   const navi = useNavigate();
 
   const loginHandler = () => {
-    navi("/");
-    alert("로그인 되었습니다!");
+    navi("/signin");
+    alert("가입 되었습니다!");
   };
-
-  // console.log(isValid);
 
   return (
     <Container>
       <BackBG />
 
       <Form onSubmit={handleSubmit(loginHandler)}>
-        <h3>로그인</h3>
+        <h3>회원가입</h3>
 
         <input
           {...register("username", {
@@ -42,8 +41,21 @@ export const SignIn = () => {
         <ErrorMessage>{errors?.username?.message}</ErrorMessage>
 
         <input
+          {...register("email", {
+            required: "이메일을 입력해주세요",
+          })}
+          type="text"
+          placeholder="이메일"
+        />
+        <ErrorMessage>{errors?.email?.message}</ErrorMessage>
+
+        <input
           {...register("password", {
             required: "비밀번호를 입력해주세요",
+            minLength: {
+              value: 8,
+              message: "8자리 이상 입력해주세요",
+            },
           })}
           type="password"
           placeholder="비밀번호"
@@ -53,12 +65,8 @@ export const SignIn = () => {
         <button>로그인</button>
 
         <GoSIgnUp>
-          YeahFlix 회원이 아닌가요? 지금 <Link to={routes.signup}>가입</Link>
-          하세요 😊
-          <p>
-            이 페이지는 Google reCAPTCHA의 보호를 받아 사용자가 로봇이 아님을
-            확인합니다.
-          </p>
+          이미 YeahFlix 회원인가요? 지금
+          <Link to={routes.signin}>로그인</Link> 하세요 😊
         </GoSIgnUp>
       </Form>
     </Container>
