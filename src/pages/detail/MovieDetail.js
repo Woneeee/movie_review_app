@@ -92,7 +92,7 @@ const Desc = styled.div`
 
 const Recommand = styled.div`
   margin-top: 150px;
-  padding: 0 ${spacing.side};
+  padding: 0 250px;
   h3 {
     font-size: 30px;
     font-weight: 400;
@@ -103,8 +103,8 @@ const Recommand = styled.div`
 const Wrap = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  row-gap: 40px;
-  column-gap: 100px;
+  row-gap: 30px;
+  column-gap: 20px;
 `;
 
 const Con = styled.div`
