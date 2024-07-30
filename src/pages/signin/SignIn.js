@@ -10,6 +10,7 @@ import {
 } from "./components/SignStyle";
 import { Title } from "../../components/Title";
 import { useScrollTop } from "../../lib/useScrollTop";
+import { trending } from "../../api";
 
 export const SignIn = () => {
   useScrollTop();

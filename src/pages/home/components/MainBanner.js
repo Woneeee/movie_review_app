@@ -8,7 +8,7 @@ const Container = styled.section`
   background: url(${(props) => props.$bgUrl}) no-repeat center / cover;
   position: relative;
   padding: 450px ${spacing.side} 0 ${spacing.side};
-
+  margin-bottom: 50px;
   span {
     width: 130px;
     height: 30px;

@@ -80,9 +80,11 @@ const Keyword = styled.div`
   margin-top: 30px;
   font-size: 17px;
   p {
-    margin-right: 10px;
+    background-color: #333;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 0 10px 10px 0;
     display: inline-block;
-    line-height: 22px;
     letter-spacing: 0;
   }
   p:hover {
@@ -94,7 +96,7 @@ const Desc = styled.div`
   font-size: 18px;
   font-weight: 300;
   opacity: 0.7;
-  margin-top: 60px;
+  margin-top: 50px;
   line-height: 30px;
   letter-spacing: 0;
 `;
@@ -103,7 +105,7 @@ const Recommand = styled.div`
   margin-top: 150px;
   padding: 0 250px;
   h3 {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 400;
     margin-bottom: 30px;
   }
@@ -234,7 +236,7 @@ export const MovieDetail = () => {
                 <Keyword>
                   {keyData.map((key) => (
                     <Link key={key.id} to={`/keyword/${key.id}`}>
-                      <p>{key.name}</p>
+                      <p>#{key.name}</p>
                     </Link>
                   ))}
                 </Keyword>
