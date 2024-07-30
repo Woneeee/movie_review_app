@@ -59,7 +59,7 @@ export const SignIn = () => {
         <button>로그인</button>
 
         <GoSIgnUp>
-          YeahFlix 회원이 아닌가요? 지금 <Link to={routes.signup}>가입</Link>
+          YEAHFLIX 회원이 아닌가요? 지금 <Link to={routes.signup}>가입</Link>
           하세요 😊
           <p>
             이 페이지는 Google reCAPTCHA의 보호를 받아 사용자가 로봇이 아님을
