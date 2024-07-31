@@ -92,7 +92,7 @@ export const Search = () => {
             required: "검색어를 입력해 주세요 😊",
           })}
           type="text"
-          placeholder="영화제목, 사람 입력가능"
+          placeholder="영화, TV시리즈 제목 입력가능"
         />
 
         <Button>

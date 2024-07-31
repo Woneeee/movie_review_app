@@ -10,7 +10,7 @@ import {
 } from "./components/SignStyle";
 import { Title } from "../../components/Title";
 import { useScrollTop } from "../../lib/useScrollTop";
-import { trending } from "../../api";
+import { useState } from "react";
 
 export const SignIn = () => {
   useScrollTop();
@@ -23,12 +23,24 @@ export const SignIn = () => {
 
   const navi = useNavigate();
 
-  const loginHandler = () => {
-    navi("/");
-    alert("로그인 되었습니다!");
+  localStorage.setItem("username", "test");
+  localStorage.setItem("password", 12345);
+  const activeUsername = localStorage.getItem("username");
+  const activePassword = localStorage.getItem("password");
+
+  const [isLogin, setIsLogin] = useState();
+
+  const loginHandler = ({ username, password }) => {
+    if (activeUsername === username && activePassword === password) {
+      alert("로그인 되었습니다 😊");
+      navi("/");
+    } else {
+      setIsLogin("아이디 비밀번호를 다시 확인해주세요 🤔");
+    }
   };
 
   // console.log(isValid);
+  // console.log(isLogin);
 
   return (
     <Container>
@@ -57,6 +69,7 @@ export const SignIn = () => {
         <ErrorMessage>{errors?.password?.message}</ErrorMessage>
 
         <button>로그인</button>
+        <ErrorMessage style={{ textAlign: "center" }}>{isLogin}</ErrorMessage>
 
         <GoSIgnUp>
           YEAHFLIX 회원이 아닌가요? 지금 <Link to={routes.signup}>가입</Link>

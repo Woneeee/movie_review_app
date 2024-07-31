@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import bg from "../../../img/a.jpg";
 import bg2 from "../../../img/b.jpg";
 import { color } from "../../../GlobalStyled";
 
@@ -63,6 +62,7 @@ export const Form = styled.form`
     margin-top: 30px;
     border-radius: 3px;
     cursor: pointer;
+    margin-bottom: 10px;
   }
 `;
 

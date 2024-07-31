@@ -25,7 +25,7 @@ export const SignUp = () => {
 
   const loginHandler = () => {
     navi("/signin");
-    alert("가입 되었습니다!");
+    alert("가입 되었습니다 😊");
   };
 
   return (
