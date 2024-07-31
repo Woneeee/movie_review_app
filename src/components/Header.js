@@ -4,6 +4,8 @@ import styled from "styled-components";
 import { FaRegUser } from "react-icons/fa";
 import { color, spacing } from "../GlobalStyled";
 import { BsSearch } from "react-icons/bs";
+import { activeLogout } from "../pages/signin/SignIn";
+import { useState } from "react";
 
 const SHeader = styled.header`
   width: 100%;
@@ -57,6 +59,9 @@ const Menu = styled.ul`
   li {
     margin-left: 40px;
   }
+  li:nth-child(2) {
+    display: ${(props) => props.$show};
+  }
 
   @media screen and (max-width: 768px) {
     li {
@@ -73,6 +78,15 @@ const Menu = styled.ul`
 `;
 
 export const Header = () => {
+  // const [activeLogout, setActiveLogout] = useState(false);
+
+  // if (
+  //   localStorage.getItem("username") !== null &&
+  //   localStorage.getItem("password") !== null
+  // ) {
+  //   setActiveLogout(true);
+  // }
+
   return (
     <SHeader>
       <Logo>
