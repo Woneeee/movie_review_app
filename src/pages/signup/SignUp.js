@@ -49,6 +49,10 @@ export const SignUp = () => {
         <input
           {...register("email", {
             required: "이메일을 입력해주세요",
+            pattern: {
+              value: /^[a-zA-Z0-9+-_.]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/,
+              message: "올바른 이메일 형식을 입력해주세요",
+            },
           })}
           type="text"
           placeholder="이메일"
