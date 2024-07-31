@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import bg from "../../../img/a.jpg";
+import bg2 from "../../../img/b.jpg";
 import { color } from "../../../GlobalStyled";
 
 export const Container = styled.div`
   height: 100vh;
-  background: url(${bg}) no-repeat center / cover;
+  background: url(${bg2}) no-repeat center / cover;
   position: relative;
   display: flex;
   justify-content: center;
@@ -27,6 +28,7 @@ export const BackBG = styled.div`
 export const Form = styled.form`
   width: 500px;
   height: 700px;
+  border-radius: 3px;
   background-color: rgba(17, 17, 17, 0.8);
   backdrop-filter: blur(5px);
   padding: 70px 50px;

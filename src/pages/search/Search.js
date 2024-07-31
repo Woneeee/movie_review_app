@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { BsSearch } from "react-icons/bs";
 import styled from "styled-components";
 import { spacing } from "../../GlobalStyled";
-import { searchMovie, searchPerson, searchTv } from "../../api";
+import { searchMovie, searchTv } from "../../api";
 import { useState } from "react";
 import { W500_URL } from "../../constant/imgUrl";
 import { Link } from "react-router-dom";

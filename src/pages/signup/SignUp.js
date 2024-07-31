@@ -68,7 +68,7 @@ export const SignUp = () => {
         />
         <ErrorMessage>{errors?.password?.message}</ErrorMessage>
 
-        <button>로그인</button>
+        <button>가입</button>
 
         <GoSIgnUp>
           이미 YEAHFLIX 회원인가요? 지금

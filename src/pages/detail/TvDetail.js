@@ -114,7 +114,7 @@ export const TvDetail = () => {
           {recomData && (
             <Recommand>
               <h3>
-                {detailData.name} 를 좋아하신다면 ?? 🤔 이 영화도
+                {detailData.name} 를 좋아하신다면 ?? 🤔 이 TV시리즈도
                 추천해드릴게요!
               </h3>
 
