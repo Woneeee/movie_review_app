@@ -3,7 +3,7 @@ import { keyDetail, keywordRelate } from "../../api";
 import { useEffect, useState } from "react";
 import { Loading } from "../../components/Loading";
 import { Title } from "../../components/Title";
-import { ORIGIN_URL } from "../../constant/imgUrl";
+import { W500_URL } from "../../constant/imgUrl";
 import styled from "styled-components";
 import { spacing } from "../../GlobalStyled";
 
@@ -73,7 +73,7 @@ export const Keyword = () => {
               {keyData.map((key) => (
                 <Link to={`/moviedetail/${key.id}`} key={key.id}>
                   <Con>
-                    <img src={ORIGIN_URL + key.backdrop_path} alt={key.title} />
+                    <img src={W500_URL + key.backdrop_path} alt={key.title} />
                   </Con>
                 </Link>
               ))}

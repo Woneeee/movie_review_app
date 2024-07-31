@@ -82,5 +82,14 @@ export const recomTv = (series_id) =>
     res.json()
   );
 
-export const previewTv = (series_id) =>
-  fetch(url(`tv/${series_id}/video`), options).then((res) => res.json());
+export const previewTv = (series_id) => {
+  const tvPreviewUrl = baseUrl + `tv/${series_id}/videos`;
+
+  return fetch(tvPreviewUrl, options).then((res) => res.json());
+};
+
+export const searchTv = (series_id) => {
+  const searchTvUrl = baseUrl + `search/tv?query=${series_id}&language=ko-kr`;
+
+  return fetch(searchTvUrl, options).then((res) => res.json());
+};

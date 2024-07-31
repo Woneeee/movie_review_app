@@ -6,7 +6,7 @@ const SFooter = styled.div`
   justify-content: center;
   align-items: center;
   border-top: 1px solid #555;
-  margin-top: 200px;
+  margin-top: 190px;
   font-size: 15px;
 `;
 

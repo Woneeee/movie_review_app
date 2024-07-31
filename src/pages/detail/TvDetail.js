@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { recomTv, seriesDetail } from "../../api";
+import { previewTv, recomTv, seriesDetail } from "../../api";
 import { Link, useParams } from "react-router-dom";
 import { Loading } from "../../components/Loading";
 import {
@@ -8,18 +8,27 @@ import {
   PosterWrap,
   InfoWrap,
   Info,
+  Button,
   Genres,
   Desc,
   Recommand,
   Wrap,
   Con,
+  Video,
+  Close,
 } from "./components/DetailStyle";
 import { Title } from "../../components/Title";
 import { W500_URL } from "../../constant/imgUrl";
+import { useScrollTop } from "../../lib/useScrollTop";
+import { IoClose } from "react-icons/io5";
+import { FaPlay } from "react-icons/fa";
 
 export const TvDetail = () => {
+  useScrollTop();
+
   const [detailData, setDetailData] = useState();
   const [recomData, setRecomData] = useState();
+  const [videoData, setVideoData] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const { id: series_id } = useParams();
   // console.log(id);
@@ -29,9 +38,11 @@ export const TvDetail = () => {
       try {
         const detail = await seriesDetail(series_id);
         const { results: recomResult } = await recomTv(series_id);
+        const { results: videoResult } = await previewTv(series_id);
 
         setDetailData(detail);
         setRecomData(recomResult);
+        setVideoData(videoResult);
         setIsLoading(false);
       } catch (error) {
         console(error);
@@ -40,8 +51,23 @@ export const TvDetail = () => {
   }, [series_id]);
 
   // console.log(detailData);
-  console.log(recomData);
+  // console.log(recomData);
+  console.log(videoData);
   // console.log(isLoading);
+
+  const [show, setShow] = useState(false);
+
+  const playHandler = () => {
+    if (!show) {
+      setShow(true);
+    }
+  };
+
+  const closeHandler = () => {
+    if (show) {
+      setShow(false);
+    }
+  };
 
   return (
     <>
@@ -67,6 +93,11 @@ export const TvDetail = () => {
                   <span>{Math.round(detailData.vote_average)}점</span>
 
                   <span>총 {detailData.number_of_seasons}시즌</span>
+
+                  <Button onClick={playHandler}>
+                    <FaPlay />
+                    재생
+                  </Button>
                 </Info>
 
                 <Genres>
@@ -97,6 +128,25 @@ export const TvDetail = () => {
                 ))}
               </Wrap>
             </Recommand>
+          )}
+
+          {videoData.length > 0 && (
+            <Video $playActive={show ? "block" : "none"}>
+              <Close onClick={closeHandler}>
+                <IoClose />
+              </Close>
+
+              <iframe
+                width="1025"
+                height="580"
+                src={`https://www.youtube.com/embed/${videoData[0].key}?si=naDiGR7aPy8NbSOf`}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+            </Video>
           )}
         </>
       )}

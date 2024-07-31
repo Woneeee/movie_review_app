@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { BsSearch } from "react-icons/bs";
 import styled from "styled-components";
 import { spacing } from "../../GlobalStyled";
-import { searchMovie, searchPerson } from "../../api";
+import { searchMovie, searchPerson, searchTv } from "../../api";
 import { useState } from "react";
 import { W500_URL } from "../../constant/imgUrl";
 import { Link } from "react-router-dom";
@@ -48,6 +48,8 @@ const ConWrap = styled.div`
   grid-template-columns: repeat(5, 1fr);
   row-gap: 30px;
   column-gap: 15px;
+  margin-bottom: 40px;
+  margin-top: 20px;
 `;
 
 const Con = styled.div`
@@ -58,10 +60,9 @@ const Con = styled.div`
   }
 `;
 
-const Wrap = styled.div``;
-
 export const Search = () => {
   const [searchData, setSearchData] = useState();
+  const [tvData, setTvData] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
   const {
@@ -72,12 +73,15 @@ export const Search = () => {
 
   const searchHandler = async ({ searchWord }) => {
     const { results } = await searchMovie(searchWord);
+    const { results: tvResult } = await searchTv(searchWord);
 
     setSearchData(results);
+    setTvData(tvResult);
     setIsLoading(false);
   };
 
   // console.log(searchData);
+  console.log(tvData);
   // console.log(isLoading);
 
   return (
@@ -99,7 +103,7 @@ export const Search = () => {
       </Form>
 
       {searchData?.length === 0 ? (
-        "검색결과가 없습니다 😢"
+        "영화 검색결과가 없습니다 😢"
       ) : (
         <>
           {searchData && (
@@ -108,6 +112,23 @@ export const Search = () => {
                 <Link to={`/moviedetail/${res.id}`} key={res.id}>
                   <Con>
                     <img src={W500_URL + res.poster_path} alt={res.title} />
+                  </Con>
+                </Link>
+              ))}
+            </ConWrap>
+          )}
+        </>
+      )}
+      {tvData?.length === 0 ? (
+        "티비시리즈 검색결과가 없습니다 😢"
+      ) : (
+        <>
+          {tvData && (
+            <ConWrap>
+              {tvData.map((tv) => (
+                <Link to={`/tvdetail/${tv.id}`} key={tv.id}>
+                  <Con>
+                    <img src={W500_URL + tv.poster_path} alt={tv.title} />
                   </Con>
                 </Link>
               ))}
