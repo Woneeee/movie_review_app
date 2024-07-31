@@ -23,8 +23,6 @@ export const SignIn = () => {
 
   const navi = useNavigate();
 
-  localStorage.setItem("username", "test");
-  localStorage.setItem("password", 12345);
   const activeUsername = localStorage.getItem("username");
   const activePassword = localStorage.getItem("password");
 

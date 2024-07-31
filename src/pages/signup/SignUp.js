@@ -23,9 +23,12 @@ export const SignUp = () => {
 
   const navi = useNavigate();
 
-  const loginHandler = () => {
-    navi("/signin");
+  const loginHandler = ({ username, password }) => {
+    localStorage.setItem("username", username);
+    localStorage.setItem("password", password);
+
     alert("가입 되었습니다 😊");
+    navi("/signin");
   };
 
   return (
