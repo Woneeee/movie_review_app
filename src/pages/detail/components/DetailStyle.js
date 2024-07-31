@@ -23,7 +23,6 @@ export const PosterWrap = styled.div`
 
 export const InfoWrap = styled.div`
   width: 47%;
-
   h3 {
     font-size: 65px;
     font-weight: 700;

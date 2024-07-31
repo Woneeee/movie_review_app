@@ -48,7 +48,7 @@ const ConWrap = styled.div`
   grid-template-columns: repeat(5, 1fr);
   row-gap: 30px;
   column-gap: 15px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   margin-top: 20px;
 `;
 
@@ -120,7 +120,7 @@ export const Search = () => {
         </>
       )}
       {tvData?.length === 0 ? (
-        "티비시리즈 검색결과가 없습니다 😢"
+        "TV시리즈 검색결과가 없습니다 😢"
       ) : (
         <>
           {tvData && (
