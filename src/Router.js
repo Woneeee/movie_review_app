@@ -9,6 +9,7 @@ import { PageNotFound } from "./pages/PageNotFound";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { MovieDetail } from "./pages/detail/MovieDetail";
+import { TvDetail } from "./pages/detail/TvDetail";
 
 const Router = () => {
   return (
@@ -17,6 +18,7 @@ const Router = () => {
       <Routes>
         <Route path={routes.home} element={<Home />} />
         <Route path={routes.moviedetail} element={<MovieDetail />} />
+        <Route path={routes.tvdetail} element={<TvDetail />} />
         <Route path={routes.keyword} element={<Keyword />} />
         <Route path={routes.search} element={<Search />} />
         <Route path={routes.signin} element={<SignIn />} />

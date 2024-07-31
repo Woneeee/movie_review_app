@@ -51,7 +51,7 @@ const params = {
   },
 };
 
-export const Contents = ({ title, movieData }) => {
+export const Movies = ({ title, movieData }) => {
   return (
     <Container>
       <STitle>{title}</STitle>

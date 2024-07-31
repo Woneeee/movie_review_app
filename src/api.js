@@ -73,3 +73,11 @@ export const searchPerson = (Person) => {
 
   return fetch(personSearchUrl, options).then((res) => res.json());
 };
+
+export const recomTv = (series_id) =>
+  fetch(url(`tv/${series_id}/recommendations`), options).then((res) =>
+    res.json()
+  );
+
+export const previewTv = (series_id) =>
+  fetch(url(`tv/${series_id}/video`), options).then((res) => res.json());

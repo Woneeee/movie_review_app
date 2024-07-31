@@ -13,8 +13,9 @@ import {
 import { Loading } from "../../components/Loading";
 import { MainBanner } from "./components/MainBanner";
 import "swiper/css";
-import { Contents } from "./components/Contents";
 import { Title } from "../../components/Title";
+import { Movies } from "./components/Movies";
+import { Series } from "./components/Series";
 
 export const Home = () => {
   const [trdData, setTrdData] = useState();
@@ -62,7 +63,6 @@ export const Home = () => {
   // console.log(popData);
   // console.log(topData);
   // console.log(upData);
-  // console.log(airingData);
   // console.log(onAirData);
   // console.log(isLoading);
 
@@ -75,15 +75,16 @@ export const Home = () => {
           <Title titleName="HOME" />
           <MainBanner data={trdData[0]} />
 
-          <Contents title="상영 영화" movieData={nowData} />
-          <Contents title="트렌드 영화" movieData={trdData} />
-          <Contents title="인기 영화" movieData={popData} />
-          <Contents title="높은 평점 영화" movieData={topData} />
-          <Contents title="개봉 예정 영화" movieData={upData} />
-          <Contents title="트렌드 TV시리즈" movieData={trdTvData} />
-          <Contents title="방영 TV시리즈" movieData={onAirData} />
-          <Contents title="유명 TV시리즈" movieData={popTvData} />
-          <Contents title="높은 평점 TV시리즈" movieData={topTvData} />
+          <Movies title="상영 영화" movieData={nowData} />
+          <Movies title="트렌드 영화" movieData={trdData} />
+          <Movies title="인기 영화" movieData={popData} />
+          <Movies title="높은 평점 영화" movieData={topData} />
+          <Movies title="개봉 예정 영화" movieData={upData} />
+
+          <Series title="방영 TV시리즈" tvData={onAirData} />
+          <Series title="트렌드 TV시리즈" tvData={trdTvData} />
+          <Series title="인기 TV시리즈" tvData={popTvData} />
+          <Series title="높은 평점 TV시리즈" tvData={topTvData} />
         </>
       )}
     </>
