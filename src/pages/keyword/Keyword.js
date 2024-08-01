@@ -36,13 +36,16 @@ const Container = styled.div`
 
 const ConWrap = styled.div`
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  row-gap: 20px;
-  column-gap: 15px;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 10px;
+  column-gap: 10px;
   @media screen and (max-width: 1000px) {
     grid-template-columns: repeat(3, 1fr);
     row-gap: 1.5vw;
     column-gap: 1vw;
+  }
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
   }
 `;
 
@@ -52,9 +55,14 @@ const Con = styled.div`
     position: absolute;
     left: 10px;
     bottom: 10px;
-    font-size: 21px;
+    font-size: 1.5vw;
     font-weight: 400;
-    opacity: 0.6;
+    opacity: 0.7;
+  }
+  @media screen and (max-width: 1000px) {
+    h2 {
+      font-size: 16px;
+    }
   }
 `;
 

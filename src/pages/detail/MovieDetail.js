@@ -23,6 +23,7 @@ import {
   Video,
   Close,
 } from "./components/DetailStyle";
+import noImage from "../../img/c.gif";
 
 export const MovieDetail = () => {
   useScrollTop();
@@ -83,9 +84,15 @@ export const MovieDetail = () => {
           <Title titleName={detail.title} />
           <Container>
             <ConWrap>
-              <PosterWrap>
-                <img src={W500_URL + detail.poster_path} alt={detail.title} />
-              </PosterWrap>
+              {detail.poster_path ? (
+                <PosterWrap>
+                  <img src={W500_URL + detail.poster_path} alt={detail.title} />
+                </PosterWrap>
+              ) : (
+                <PosterWrap>
+                  <img src={noImage} alt="no_image" />
+                </PosterWrap>
+              )}
 
               <InfoWrap>
                 <h3>{detail.title}</h3>
@@ -127,11 +134,24 @@ export const MovieDetail = () => {
 
               <Wrap>
                 {recomData.map((data) => (
-                  <Link to={`/moviedetail/${data.id}`} key={data.id}>
-                    <Con>
-                      <img src={W500_URL + data.poster_path} alt={data.title} />
-                    </Con>
-                  </Link>
+                  <>
+                    {data.poster_path ? (
+                      <Link to={`/moviedetail/${data.id}`} key={data.id}>
+                        <Con>
+                          <img
+                            src={W500_URL + data.poster_path}
+                            alt={data.title}
+                          />
+                        </Con>
+                      </Link>
+                    ) : (
+                      <Link to={`/moviedetail/${data.id}`}>
+                        <Con>
+                          <img src={noImage} alt="no_image" />
+                        </Con>
+                      </Link>
+                    )}
+                  </>
                 ))}
               </Wrap>
             </Recommand>
