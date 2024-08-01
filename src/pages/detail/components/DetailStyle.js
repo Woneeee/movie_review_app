@@ -39,7 +39,7 @@ export const InfoWrap = styled.div`
   }
   @media screen and (max-width: 1000px) {
     h3 {
-      font-size: 30px;
+      font-size: 35px;
       margin-bottom: 2vw;
     }
   }
@@ -201,12 +201,12 @@ export const Con = styled.div`
 `;
 
 export const Video = styled.div`
-  /* background-color: #222; */
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -55%);
   display: ${(props) => props.$playActive};
+
   @media screen and (max-width: 1200px) {
     iframe {
       width: 80vw;
