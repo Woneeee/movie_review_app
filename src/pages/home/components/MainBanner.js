@@ -7,10 +7,13 @@ const Container = styled.section`
   height: 83vh;
   background: url(${(props) => props.$bgUrl}) no-repeat center / cover;
   position: relative;
-  padding: 290px ${spacing.side} 0 ${spacing.side};
+  padding: 450px ${spacing.side} 0 ${spacing.side};
   margin-bottom: 50px;
+  @media screen and (max-width: 1400px) {
+    padding: 500px ${spacing.side} 0 ${spacing.side};
+  }
   @media screen and (max-width: 768px) {
-    padding: 350px ${spacing.moside} 0 ${spacing.moside};
+    padding: 550px ${spacing.moside} 0 ${spacing.moside};
   }
 `;
 

@@ -26,7 +26,7 @@ export const BackBG = styled.div`
 
 export const Form = styled.form`
   width: 500px;
-  height: 82%;
+  height: 700px;
   border-radius: 3px;
   background-color: rgba(17, 17, 17, 0.8);
   backdrop-filter: blur(5px);
