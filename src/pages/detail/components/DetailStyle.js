@@ -10,11 +10,14 @@ export const ConWrap = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 140px;
+
+  @media screen and (max-width: 1200px) {
+    width: 70%;
+  }
 `;
 
 export const PosterWrap = styled.div`
   width: 47%;
-  /* height: 730px; */
   img {
     height: 100%;
     object-fit: cover;
@@ -22,11 +25,23 @@ export const PosterWrap = styled.div`
 `;
 
 export const InfoWrap = styled.div`
-  width: 47%;
+  width: 48%;
   h3 {
     font-size: 65px;
     font-weight: 700;
     margin-bottom: 30px;
+  }
+  @media screen and (max-width: 1200px) {
+    h3 {
+      font-size: 4.5vw;
+      margin-bottom: 2vw;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    h3 {
+      font-size: 30px;
+      margin-bottom: 2vw;
+    }
   }
 `;
 
@@ -40,6 +55,20 @@ export const Info = styled.div`
     font-size: 18px;
     font-weight: 400;
     margin-right: 15px;
+  }
+  @media screen and (max-width: 1200px) {
+    span {
+      font-size: 1.5vw;
+      padding: 0.9vw 1.3vw;
+      margin-right: 0.7vw;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    span {
+      font-size: 14px;
+      padding: 0.9vw 1.3vw;
+      margin-right: 0.7vw;
+    }
   }
 `;
 
@@ -55,6 +84,16 @@ export const Button = styled.div`
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  @media screen and (max-width: 1200px) {
+    margin-left: 3vw;
+    width: 6.5vw;
+    font-size: 1.5vw;
+  }
+  @media screen and (max-width: 1000px) {
+    margin-left: 3vw;
+    width: 8vw;
+    font-size: 14px;
+  }
 `;
 
 export const Genres = styled.div`
@@ -63,6 +102,18 @@ export const Genres = styled.div`
   li {
     list-style: disc;
     margin-top: 10px;
+  }
+  @media screen and (max-width: 1200px) {
+    li {
+      font-size: 1.5vw;
+      margin-top: 0.5vw;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    li {
+      font-size: 14px;
+      margin-top: 0.5vw;
+    }
   }
 `;
 
@@ -80,6 +131,12 @@ export const Keyword = styled.div`
   p:hover {
     text-decoration: underline;
   }
+  @media screen and (max-width: 1200px) {
+    font-size: 1.4vw;
+  }
+  @media screen and (max-width: 1000px) {
+    font-size: 12px;
+  }
 `;
 
 export const Desc = styled.div`
@@ -89,27 +146,53 @@ export const Desc = styled.div`
   margin-top: 50px;
   line-height: 30px;
   letter-spacing: 0;
+  @media screen and (max-width: 1200px) {
+    font-size: 1.5vw;
+    line-height: 2.4vw;
+    margin-top: 4vw;
+  }
+  @media screen and (max-width: 1000px) {
+    font-size: 14px;
+    line-height: 18px;
+  }
 `;
 
 export const Recommand = styled.div`
   margin-top: 150px;
-  padding: 0 250px;
+  padding: 0 15%;
   h3 {
     font-size: 25px;
     font-weight: 400;
     margin-bottom: 30px;
+  }
+  @media screen and (max-width: 1200px) {
+    margin-top: 12vw;
+    h3 {
+      font-size: 2vw;
+      margin-bottom: 2.5vw;
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    h3 {
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
 `;
 
 export const Wrap = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  row-gap: 30px;
+  row-gap: 25px;
   column-gap: 20px;
+  @media screen and (max-width: 1200px) {
+    row-gap: 2vw;
+    column-gap: 1.8vw;
+  }
 `;
 
 export const Con = styled.div`
-  height: 540px;
+  height: 100%;
   img {
     height: 100%;
     object-fit: cover;
@@ -121,8 +204,14 @@ export const Video = styled.div`
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -60%);
+  transform: translate(-50%, -55%);
   display: ${(props) => props.$playActive};
+  @media screen and (max-width: 1200px) {
+    iframe {
+      width: 80vw;
+      height: 50vw;
+    }
+  }
 `;
 
 export const Close = styled.button`

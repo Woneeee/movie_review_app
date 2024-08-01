@@ -146,7 +146,7 @@ export const MovieDetail = () => {
               </Close>
 
               <iframe
-                width="1025"
+                width="1025vw"
                 height="580"
                 src={`https://www.youtube.com/embed/${videoData[0].key}?si=naDiGR7aPy8NbSOf`}
                 title="YouTube video player"

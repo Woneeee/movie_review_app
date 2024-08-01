@@ -32,6 +32,7 @@ export const SignIn = () => {
     if (activeUsername === username && activePassword === password) {
       alert("로그인 되었습니다 😊");
       navi("/");
+      localStorage.setItem("login", "isLogin");
     } else {
       setIsLogin("아이디 비밀번호를 다시 확인해주세요 🤔");
     }
