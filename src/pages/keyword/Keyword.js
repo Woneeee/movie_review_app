@@ -11,7 +11,7 @@ const STitle = styled.div`
   padding: 100px ${spacing.side};
   text-align: center;
   font-size: 60px;
-  font-weight: 700;
+  font-weight: 600;
   @media screen and (max-width: 1000px) {
     padding: 100px ${spacing.moside} 80px ${spacing.moside};
     font-size: 40px;
@@ -22,7 +22,7 @@ const Container = styled.div`
   padding: 0 ${spacing.side};
   h3 {
     font-size: 27px;
-    font-weight: 600;
+    font-weight: 500;
     margin-top: 40px;
     margin-bottom: 25px;
   }
@@ -52,8 +52,9 @@ const Con = styled.div`
     position: absolute;
     left: 10px;
     bottom: 10px;
-    font-size: 22px;
+    font-size: 21px;
     font-weight: 400;
+    opacity: 0.6;
   }
 `;
 
