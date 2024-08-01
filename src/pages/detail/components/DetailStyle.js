@@ -207,7 +207,7 @@ export const Video = styled.div`
   top: 0;
   left: 0;
   background-color: rgba(17, 17, 17, 0.8);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
   display: ${(props) => props.$playActive};
 
   iframe {
@@ -221,7 +221,7 @@ export const Video = styled.div`
   @media screen and (max-width: 1200px) {
     iframe {
       width: 80vw;
-      height: 50vw;
+      height: 47vw;
     }
   }
 `;
@@ -238,4 +238,7 @@ export const Close = styled.button`
   border-radius: 100%;
   margin: 100px auto;
   cursor: pointer;
+  @media screen and (max-width: 1200px) {
+    margin: 170px auto;
+  }
 `;
