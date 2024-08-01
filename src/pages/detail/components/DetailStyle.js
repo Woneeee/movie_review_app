@@ -172,7 +172,7 @@ export const Recommand = styled.div`
       margin-bottom: 2.5vw;
     }
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1000px) {
     h3 {
       font-size: 16px;
       line-height: 22px;
