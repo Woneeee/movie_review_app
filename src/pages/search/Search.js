@@ -6,6 +6,7 @@ import { searchMovie, searchTv } from "../../api";
 import { useState } from "react";
 import { W500_URL } from "../../constant/imgUrl";
 import { Link } from "react-router-dom";
+import noImage from "../../img/c.gif";
 
 const Container = styled.div`
   padding: 150px ${spacing.side};
@@ -135,7 +136,7 @@ export const Search = () => {
           {tvData && (
             <ConWrap>
               {tvData.map((tv) => (
-                <Link to={`/tvdetail/${tv.id}`} key={tv.id}>
+                <Link key={tv.id} to={`/tvdetail/${tv.id}`}>
                   <Con>
                     <img src={W500_URL + tv.poster_path} alt={tv.title} />
                   </Con>

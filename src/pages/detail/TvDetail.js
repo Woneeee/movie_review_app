@@ -22,6 +22,7 @@ import { W500_URL } from "../../constant/imgUrl";
 import { useScrollTop } from "../../lib/useScrollTop";
 import { IoClose } from "react-icons/io5";
 import { FaPlay } from "react-icons/fa";
+import noImage from "../../img/c.gif";
 
 export const TvDetail = () => {
   useScrollTop();
@@ -52,7 +53,7 @@ export const TvDetail = () => {
 
   // console.log(detailData);
   // console.log(recomData);
-  console.log(videoData);
+  // console.log(videoData);
   // console.log(isLoading);
 
   const [show, setShow] = useState(false);
