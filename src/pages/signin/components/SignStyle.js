@@ -8,7 +8,7 @@ export const Container = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
-  padding: 170px 0;
+  align-items: center;
 `;
 
 export const BackBG = styled.div`
@@ -26,11 +26,11 @@ export const BackBG = styled.div`
 
 export const Form = styled.form`
   width: 500px;
-  height: 700px;
+  height: 82%;
   border-radius: 3px;
   background-color: rgba(17, 17, 17, 0.8);
   backdrop-filter: blur(5px);
-  padding: 70px 50px;
+  padding: 60px 50px;
   h3 {
     font-size: 40px;
     text-align: center;

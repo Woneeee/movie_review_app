@@ -81,7 +81,7 @@ export const Search = () => {
   };
 
   // console.log(searchData);
-  console.log(tvData);
+  // console.log(tvData);
   // console.log(isLoading);
 
   return (
