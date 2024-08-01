@@ -1,9 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { routes } from "../routes";
 import styled from "styled-components";
 import { FaRegUser } from "react-icons/fa";
 import { color, spacing } from "../GlobalStyled";
 import { BsSearch } from "react-icons/bs";
+import { useEffect, useState } from "react";
+import { MdLogout } from "react-icons/md";
 
 const SHeader = styled.header`
   width: 100%;
@@ -73,11 +75,26 @@ const Menu = styled.ul`
 `;
 
 export const Header = () => {
-  // const [isLogin, setIsLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
 
-  // if (localStorage.getItem("login") === "isLogin") {
-  //   setIsLogin(true);
-  // }
+  useEffect(() => {
+    (() => {
+      if (localStorage.getItem("login") === "isLogin") {
+        setIsLogin(true);
+      }
+    })();
+  }, []);
+  // infinite re-render 걸리면 useEffect 쓰면됨
+
+  const logoutHandler = () => {
+    localStorage.removeItem("username");
+    localStorage.removeItem("password");
+    localStorage.removeItem("login");
+    alert("로그아웃 되었습니다");
+    if (localStorage.getItem("login") === null) {
+      setIsLogin(false);
+    }
+  };
 
   return (
     <SHeader>
@@ -92,9 +109,9 @@ export const Header = () => {
           </Link>
         </li>
 
-        {/* <li>
+        <li>
           {isLogin ? (
-            <Link to={routes.signin}>
+            <Link onClick={logoutHandler}>
               <MdLogout />
             </Link>
           ) : (
@@ -102,11 +119,6 @@ export const Header = () => {
               <FaRegUser />
             </Link>
           )}
-        </li> */}
-        <li>
-          <Link to={routes.signin}>
-            <FaRegUser />
-          </Link>
         </li>
       </Menu>
     </SHeader>

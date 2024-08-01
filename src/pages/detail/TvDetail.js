@@ -131,22 +131,24 @@ export const TvDetail = () => {
           )}
 
           {videoData.length > 0 && (
-            <Video $playActive={show ? "block" : "none"}>
-              <Close onClick={closeHandler}>
-                <IoClose />
-              </Close>
+            <>
+              <Video $playActive={show ? "block" : "none"}>
+                <Close onClick={closeHandler}>
+                  <IoClose />
+                </Close>
 
-              <iframe
-                width="1025"
-                height="580"
-                src={`https://www.youtube.com/embed/${videoData[0].key}?si=naDiGR7aPy8NbSOf`}
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe>
-            </Video>
+                <iframe
+                  width="1025"
+                  height="580"
+                  src={`https://www.youtube.com/embed/${videoData[0].key}?si=naDiGR7aPy8NbSOf`}
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                ></iframe>
+              </Video>
+            </>
           )}
         </>
       )}

@@ -201,11 +201,22 @@ export const Con = styled.div`
 `;
 
 export const Video = styled.div`
+  width: 100%;
+  height: 100vh;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -55%);
+  top: 0;
+  left: 0;
+  background-color: rgba(17, 17, 17, 0.8);
+  backdrop-filter: blur(5px);
   display: ${(props) => props.$playActive};
+
+  iframe {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -55%);
+    margin: 0 auto;
+  }
 
   @media screen and (max-width: 1200px) {
     iframe {
@@ -225,6 +236,6 @@ export const Close = styled.button`
   justify-content: center;
   align-items: center;
   border-radius: 100%;
-  margin: 20px auto;
+  margin: 100px auto;
   cursor: pointer;
 `;
