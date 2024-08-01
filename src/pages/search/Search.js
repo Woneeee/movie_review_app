@@ -9,6 +9,10 @@ import { Link } from "react-router-dom";
 
 const Container = styled.div`
   padding: 150px ${spacing.side};
+
+  @media screen and (max-width: 768px) {
+    padding: 130px ${spacing.moside};
+  }
 `;
 
 const Form = styled.form`
@@ -46,14 +50,19 @@ const ErrorMessage = styled.div`
 const ConWrap = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  row-gap: 30px;
+  row-gap: 20px;
   column-gap: 15px;
   margin-bottom: 30px;
   margin-top: 20px;
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 2vw;
+    column-gap: 1.5vw;
+  }
 `;
 
 const Con = styled.div`
-  height: 540px;
+  height: 100%;
   img {
     height: 100%;
     object-fit: cover;

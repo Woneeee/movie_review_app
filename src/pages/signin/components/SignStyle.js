@@ -30,7 +30,7 @@ export const Form = styled.form`
   border-radius: 3px;
   background-color: rgba(17, 17, 17, 0.8);
   backdrop-filter: blur(5px);
-  padding: 60px 50px;
+  padding: 60px 60px;
   h3 {
     font-size: 40px;
     text-align: center;
