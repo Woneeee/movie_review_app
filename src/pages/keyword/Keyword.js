@@ -12,6 +12,10 @@ const STitle = styled.div`
   text-align: center;
   font-size: 60px;
   font-weight: 600;
+  @media screen and (max-width: 1000px) {
+    padding: 100px ${spacing.moside} 80px ${spacing.moside};
+    font-size: 40px;
+  }
 `;
 
 const Container = styled.div`
@@ -20,13 +24,24 @@ const Container = styled.div`
     font-size: 25px;
     margin-bottom: 20px;
   }
+  @media screen and (max-width: 1000px) {
+    padding: 0 ${spacing.moside};
+    h3 {
+      font-size: 20px;
+    }
+  }
 `;
 
 const ConWrap = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  row-gap: 30px;
-  column-gap: 20px;
+  row-gap: 20px;
+  column-gap: 15px;
+  @media screen and (max-width: 1000px) {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 1.5vw;
+    column-gap: 1vw;
+  }
 `;
 
 const Con = styled.div``;
@@ -53,7 +68,7 @@ export const Keyword = () => {
   }, [keyword_id]);
 
   // console.log(keyData);
-  console.log(keyNameData);
+  // console.log(keyNameData);
   // console.log(isLoading);
 
   return (

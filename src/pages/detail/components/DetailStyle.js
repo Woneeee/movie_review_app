@@ -186,6 +186,7 @@ export const Wrap = styled.div`
   row-gap: 25px;
   column-gap: 20px;
   @media screen and (max-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
     row-gap: 2vw;
     column-gap: 1.8vw;
   }
