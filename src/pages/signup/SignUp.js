@@ -27,7 +27,7 @@ export const SignUp = () => {
     localStorage.setItem("username", username);
     localStorage.setItem("password", password);
 
-    alert("가입 되었습니다 😊");
+    alert("가입 되었습니다 👏🏻😊");
     navi("/signin");
   };
 

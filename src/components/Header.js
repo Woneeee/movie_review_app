@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { routes } from "../routes";
 import styled from "styled-components";
 import { FaRegUser } from "react-icons/fa";
@@ -76,6 +76,8 @@ const Menu = styled.ul`
 
 export const Header = () => {
   const [isLogin, setIsLogin] = useState(false);
+  const { pathname } = useLocation();
+  // console.log(pathname);
 
   useEffect(() => {
     (() => {
@@ -83,14 +85,15 @@ export const Header = () => {
         setIsLogin(true);
       }
     })();
-  }, []);
+  }, [pathname]);
+
   // infinite re-render 걸리면 useEffect 쓰면됨
 
   const logoutHandler = () => {
     localStorage.removeItem("username");
     localStorage.removeItem("password");
     localStorage.removeItem("login");
-    alert("로그아웃 되었습니다");
+    alert("로그아웃 되었습니다 다음에 또 봐요 🖐🏻");
     if (localStorage.getItem("login") === null) {
       setIsLogin(false);
     }

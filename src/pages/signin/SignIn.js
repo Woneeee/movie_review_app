@@ -30,7 +30,7 @@ export const SignIn = () => {
 
   const loginHandler = ({ username, password }) => {
     if (activeUsername === username && activePassword === password) {
-      alert("로그인 되었습니다 😊");
+      alert("로그인 되었습니다 어서오세요 😊");
       navi("/");
       localStorage.setItem("login", "isLogin");
     } else {
