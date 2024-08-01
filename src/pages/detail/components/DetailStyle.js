@@ -209,7 +209,7 @@ export const Video = styled.div`
   background-color: rgba(17, 17, 17, 0.8);
   backdrop-filter: blur(10px);
   display: ${(props) => props.$playActive};
-
+  padding: 120px 0 0 0;
   iframe {
     position: absolute;
     left: 50%;
@@ -219,10 +219,14 @@ export const Video = styled.div`
   }
 
   @media screen and (max-width: 1200px) {
+    padding: 180px 0 0 0;
     iframe {
       width: 80vw;
       height: 47vw;
     }
+  }
+  @media screen and (max-width: 768px) {
+    padding: 300px 0 0 0;
   }
 `;
 
@@ -236,9 +240,6 @@ export const Close = styled.button`
   justify-content: center;
   align-items: center;
   border-radius: 100%;
-  margin: 100px auto;
+  margin: 0 auto;
   cursor: pointer;
-  @media screen and (max-width: 1200px) {
-    margin: 170px auto;
-  }
 `;
