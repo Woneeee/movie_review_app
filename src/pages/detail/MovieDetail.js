@@ -123,9 +123,7 @@ export const MovieDetail = () => {
 
           {recomData && (
             <Recommand>
-              <h3>
-                {detail.title} 를 좋아하신다면 ?? 🤔 이 영화도 추천해드릴게요!
-              </h3>
+              <h3>"{detail.title}" 를 좋아하신다면 이 영화도 추천드려요 🤗</h3>
 
               <Wrap>
                 {recomData.map((data) => (

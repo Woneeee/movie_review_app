@@ -11,7 +11,7 @@ const STitle = styled.div`
   padding: 100px ${spacing.side};
   text-align: center;
   font-size: 60px;
-  font-weight: 600;
+  font-weight: 700;
   @media screen and (max-width: 1000px) {
     padding: 100px ${spacing.moside} 80px ${spacing.moside};
     font-size: 40px;
@@ -21,8 +21,10 @@ const STitle = styled.div`
 const Container = styled.div`
   padding: 0 ${spacing.side};
   h3 {
-    font-size: 25px;
-    margin-bottom: 20px;
+    font-size: 27px;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 25px;
   }
   @media screen and (max-width: 1000px) {
     padding: 0 ${spacing.moside};
@@ -44,7 +46,30 @@ const ConWrap = styled.div`
   }
 `;
 
-const Con = styled.div``;
+const Con = styled.div`
+  position: relative;
+  h2 {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    font-size: 22px;
+    font-weight: 400;
+  }
+`;
+
+const ImgBg = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.78) 0%,
+    rgba(0, 0, 0, 0.333858543417367) 24%,
+    rgba(255, 255, 255, 0) 100%
+  );
+`;
 
 export const Keyword = () => {
   const [keyData, setKeyData] = useState();
@@ -89,6 +114,8 @@ export const Keyword = () => {
                 <Link to={`/moviedetail/${key.id}`} key={key.id}>
                   <Con>
                     <img src={W500_URL + key.backdrop_path} alt={key.title} />
+                    <ImgBg />
+                    <h2>{key.title}</h2>
                   </Con>
                 </Link>
               ))}
