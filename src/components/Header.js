@@ -92,6 +92,17 @@ export const Header = () => {
           </Link>
         </li>
 
+        {/* <li>
+          {isLogin ? (
+            <Link to={routes.signin}>
+              <MdLogout />
+            </Link>
+          ) : (
+            <Link to={routes.signin}>
+              <FaRegUser />
+            </Link>
+          )}
+        </li> */}
         <li>
           <Link to={routes.signin}>
             <FaRegUser />
