@@ -151,9 +151,9 @@ export const MovieDetail = () => {
               <iframe
                 width="1025"
                 height="580"
-                src={`https://www.youtube.com/embed/${
-                  videoData[0].key
-                }?si=naDiGR7aPy8NbSOf&end=${stop ? "1" : ""}`}
+                src={`https://www.youtube.com/embed/${videoData[0].key}?end=${
+                  stop ? "1" : ""
+                }`}
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;"
