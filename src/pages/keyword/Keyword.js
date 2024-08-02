@@ -47,22 +47,33 @@ const ConWrap = styled.div`
   }
   @media screen and (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
+    row-gap: 10px;
+    column-gap: 10px;
   }
 `;
 
 const Con = styled.div`
   position: relative;
+
   h2 {
     position: absolute;
     left: 10px;
     bottom: 10px;
-    font-size: 21px;
+    font-size: 20px;
     font-weight: 400;
     opacity: 0.7;
   }
   @media screen and (max-width: 1000px) {
     h2 {
       font-size: 16px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    img {
+      border-radius: 5px;
+    }
+    h2 {
+      font-size: 15px;
     }
   }
 `;
