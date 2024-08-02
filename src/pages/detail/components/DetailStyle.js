@@ -183,8 +183,8 @@ export const Recommand = styled.div`
 export const Wrap = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  row-gap: 25px;
-  column-gap: 20px;
+  row-gap: 15px;
+  column-gap: 13px;
   @media screen and (max-width: 1200px) {
     grid-template-columns: repeat(3, 1fr);
     row-gap: 2vw;
