@@ -62,6 +62,7 @@ export const MovieDetail = () => {
   // console.log(isLoading);
 
   const [show, setShow] = useState(false);
+  const [stop, setStop] = useState(false);
 
   const playHandler = () => {
     if (!show) {
@@ -72,6 +73,9 @@ export const MovieDetail = () => {
   const closeHandler = () => {
     if (show) {
       setShow(false);
+    }
+    if (!stop) {
+      setStop(true);
     }
   };
 
@@ -145,12 +149,14 @@ export const MovieDetail = () => {
               </Close>
 
               <iframe
-                width="1025vw"
+                width="1025"
                 height="580"
-                src={`https://www.youtube.com/embed/${videoData[0].key}?si=naDiGR7aPy8NbSOf`}
+                src={`https://www.youtube.com/embed/${
+                  videoData[0].key
+                }?si=naDiGR7aPy8NbSOf&end=${stop ? "1" : ""}`}
                 title="YouTube video player"
                 frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
               ></iframe>
