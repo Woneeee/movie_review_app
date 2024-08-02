@@ -72,6 +72,9 @@ export const TvDetail = () => {
     if (!stop) {
       setStop(true);
     }
+    setTimeout(() => {
+      setStop(false);
+    }, 2000);
   };
 
   return (
