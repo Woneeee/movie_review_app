@@ -64,6 +64,27 @@ export const Form = styled.form`
     cursor: pointer;
     margin-bottom: 10px;
   }
+  @media screen and (max-width: 500px) {
+    width: 340px;
+    height: 600px;
+    padding: 60px 40px;
+    h3 {
+      font-size: 30px;
+      margin-bottom: 40px;
+    }
+    input {
+      height: 40px;
+      margin-bottom: 8px;
+      &::placeholder {
+        font-size: 16px;
+      }
+    }
+    button {
+      height: 45px;
+      margin-top: 23px;
+      font-size: 17px;
+    }
+  }
 `;
 
 export const GoSIgnUp = styled.div`
@@ -79,9 +100,20 @@ export const GoSIgnUp = styled.div`
     line-height: 23px;
     font-size: 15px;
   }
+  @media screen and (max-width: 500px) {
+    line-height: 23px;
+    font-size: 15px;
+    margin-top: 55px;
+    p {
+      font-size: 13px;
+    }
+  }
 `;
 
 export const ErrorMessage = styled.div`
   color: gold;
   margin-bottom: 10px;
+  @media screen and (max-width: 500px) {
+    font-size: 14px;
+  }
 `;
