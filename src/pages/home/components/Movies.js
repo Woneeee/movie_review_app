@@ -15,8 +15,8 @@ const Container = styled.div`
     padding: 30px 0 30px ${spacing.moside};
   }
 
-  @media screen and (max-width: 376px) {
-    padding: 15px 0 15px ${spacing.moside};
+  @media screen and (max-width: 500px) {
+    padding: 10px 0 10px ${spacing.moside};
   }
 `;
 
@@ -35,9 +35,10 @@ const STitle = styled.div`
     margin-bottom: 20px;
   }
 
-  @media screen and (max-width: 376px) {
-    font-size: 20px;
-    margin-bottom: 15px;
+  @media screen and (max-width: 500px) {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 13px;
   }
 `;
 

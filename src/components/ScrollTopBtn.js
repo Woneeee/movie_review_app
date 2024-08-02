@@ -11,7 +11,7 @@ const TopBtn = styled.div`
   font-size: 60px;
   color: ${color.point};
   @media screen and (max-width: 800px) {
-    font-size: 7vw;
+    font-size: 45px;
     bottom: 20px;
     right: 20px;
   }

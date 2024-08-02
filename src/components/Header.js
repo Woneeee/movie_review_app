@@ -45,7 +45,7 @@ const Logo = styled.div`
     }
   }
 
-  @media screen and (max-width: 376px) {
+  @media screen and (max-width: 500px) {
     a {
       font-size: 20px;
     }
@@ -66,9 +66,8 @@ const Menu = styled.ul`
     }
   }
 
-  @media screen and (max-width: 376px) {
+  @media screen and (max-width: 500px) {
     li {
-      font-size: 18px;
       margin-left: 20px;
     }
   }

@@ -15,6 +15,10 @@ const Container = styled.section`
   @media screen and (max-width: 768px) {
     padding: 550px ${spacing.moside} 0 ${spacing.moside};
   }
+  @media screen and (max-width: 500px) {
+    padding: 350px ${spacing.moside} 0 ${spacing.moside};
+    margin-bottom: 20px;
+  }
 `;
 
 const BlackBg = styled.div`

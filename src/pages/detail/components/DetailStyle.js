@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { spacing } from "../../../GlobalStyled";
 
 export const Container = styled.div`
   display: flex;
@@ -178,6 +179,9 @@ export const Recommand = styled.div`
       line-height: 22px;
     }
   }
+  @media screen and (max-width: 500px) {
+    padding: 0 ${spacing.moside};
+  }
 `;
 
 export const Wrap = styled.div`
@@ -207,6 +211,11 @@ export const Con = styled.div`
     font-size: 21px;
     font-weight: 500;
     opacity: 0.7;
+  }
+  @media screen and (max-width: 500px) {
+    img {
+      border-radius: 4px;
+    }
   }
 `;
 
