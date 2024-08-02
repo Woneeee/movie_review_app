@@ -74,7 +74,7 @@ export const Info = styled.div`
 
 export const Button = styled.div`
   all: unset;
-  width: 90px;
+  width: 95px;
   margin-left: 50px;
   background-color: white;
   border-radius: 5px;

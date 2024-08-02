@@ -99,7 +99,7 @@ export const MovieDetail = () => {
 
                   <Button onClick={playHandler}>
                     <FaPlay />
-                    재생
+                    &nbsp;&nbsp;예고편
                   </Button>
                 </Info>
 

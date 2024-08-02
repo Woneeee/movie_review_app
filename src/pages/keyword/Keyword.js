@@ -55,7 +55,7 @@ const Con = styled.div`
     position: absolute;
     left: 10px;
     bottom: 10px;
-    font-size: 1.5vw;
+    font-size: 21px;
     font-weight: 400;
     opacity: 0.7;
   }
