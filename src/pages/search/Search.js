@@ -69,9 +69,19 @@ const ConWrap = styled.div`
 
 const Con = styled.div`
   height: 100%;
+  position: relative;
   img {
     height: 100%;
     object-fit: cover;
+  }
+  h2 {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    color: #333;
+    font-size: 21px;
+    font-weight: 500;
+    opacity: 0.7;
   }
 `;
 
@@ -125,9 +135,16 @@ export const Search = () => {
             <ConWrap>
               {searchData.map((res) => (
                 <Link to={`/moviedetail/${res.id}`} key={res.id}>
-                  <Con>
-                    <img src={W500_URL + res.poster_path} alt={res.title} />
-                  </Con>
+                  {res.poster_path ? (
+                    <Con>
+                      <img src={W500_URL + res.poster_path} alt={res.title} />
+                    </Con>
+                  ) : (
+                    <Con>
+                      <img src={noImage} alt={res.title} />
+                      <h2>제목: {res.title}</h2>
+                    </Con>
+                  )}
                 </Link>
               ))}
             </ConWrap>
@@ -142,9 +159,16 @@ export const Search = () => {
             <ConWrap>
               {tvData.map((tv) => (
                 <Link key={tv.id} to={`/tvdetail/${tv.id}`}>
-                  <Con>
-                    <img src={W500_URL + tv.poster_path} alt={tv.title} />
-                  </Con>
+                  {tv.poster_path ? (
+                    <Con>
+                      <img src={W500_URL + tv.poster_path} alt={tv.title} />
+                    </Con>
+                  ) : (
+                    <Con>
+                      <img src={noImage} alt={tv.name} />
+                      <h2>제목: {tv.name}</h2>
+                    </Con>
+                  )}
                 </Link>
               ))}
             </ConWrap>

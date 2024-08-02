@@ -194,9 +194,19 @@ export const Wrap = styled.div`
 
 export const Con = styled.div`
   height: 100%;
+  position: relative;
   img {
     height: 100%;
     object-fit: cover;
+  }
+  h2 {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    color: #333;
+    font-size: 21px;
+    font-weight: 500;
+    opacity: 0.7;
   }
 `;
 

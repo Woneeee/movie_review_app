@@ -92,7 +92,11 @@ export const MovieDetail = () => {
           <Container>
             <ConWrap>
               <PosterWrap>
-                <img src={W500_URL + detail.poster_path} alt={detail.title} />
+                {detail.poster_path ? (
+                  <img src={W500_URL + detail.poster_path} alt={detail.title} />
+                ) : (
+                  <img src={noImage} alt={detail.title} />
+                )}
               </PosterWrap>
 
               <InfoWrap>
@@ -136,9 +140,19 @@ export const MovieDetail = () => {
               <Wrap>
                 {recomData.map((data) => (
                   <Link key={data.id} to={`/moviedetail/${data.id}`}>
-                    <Con>
-                      <img src={W500_URL + data.poster_path} alt={data.title} />
-                    </Con>
+                    {data.poster_path ? (
+                      <Con>
+                        <img
+                          src={W500_URL + data.poster_path}
+                          alt={data.title}
+                        />
+                      </Con>
+                    ) : (
+                      <Con>
+                        <img src={noImage} alt={data.title} />
+                        <h2>제목: {data.title}</h2>
+                      </Con>
+                    )}
                   </Link>
                 ))}
               </Wrap>

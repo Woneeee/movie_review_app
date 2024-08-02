@@ -6,6 +6,7 @@ import { Title } from "../../components/Title";
 import { W500_URL } from "../../constant/imgUrl";
 import styled from "styled-components";
 import { spacing } from "../../GlobalStyled";
+import noImage from "../../img/c.gif";
 
 const STitle = styled.div`
   padding: 100px ${spacing.side};
@@ -121,11 +122,19 @@ export const Keyword = () => {
             <ConWrap>
               {keyData.map((key) => (
                 <Link to={`/moviedetail/${key.id}`} key={key.id}>
-                  <Con>
-                    <img src={W500_URL + key.backdrop_path} alt={key.title} />
-                    <ImgBg />
-                    <h2>{key.title}</h2>
-                  </Con>
+                  {key.backdrop_path ? (
+                    <Con>
+                      <img src={W500_URL + key.backdrop_path} alt={key.title} />
+                      <ImgBg />
+                      <h2>{key.title}</h2>
+                    </Con>
+                  ) : (
+                    <Con>
+                      <img src={noImage} alt={key.title} />
+                      <ImgBg />
+                      <h2>{key.title}</h2>
+                    </Con>
+                  )}
                 </Link>
               ))}
             </ConWrap>

@@ -44,11 +44,11 @@ const STitle = styled.div`
 
 const params = {
   slidesPerView: 7.3,
-  spaceBetween: 15,
+  spaceBetween: 20,
   breakpoints: {
     1300: {
       slidesPerView: 7.3,
-      spaceBetween: 15,
+      spaceBetween: 20,
     },
     1024: {
       slidesPerView: 5.3,
