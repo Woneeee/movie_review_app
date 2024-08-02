@@ -10,11 +10,13 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { MovieDetail } from "./pages/detail/MovieDetail";
 import { TvDetail } from "./pages/detail/TvDetail";
+import { ScrollTopBtn } from "./components/ScrollTopBtn";
 
 const Router = () => {
   return (
     <HashRouter>
       <Header />
+      <ScrollTopBtn />
       <Routes>
         <Route path={routes.home} element={<Home />} />
         <Route path={routes.moviedetail} element={<MovieDetail />} />
