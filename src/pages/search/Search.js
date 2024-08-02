@@ -51,12 +51,17 @@ const ErrorMessage = styled.div`
 const ConWrap = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  row-gap: 20px;
+  row-gap: 15px;
   column-gap: 15px;
   margin-bottom: 30px;
   margin-top: 20px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1000px) {
     grid-template-columns: repeat(4, 1fr);
+    row-gap: 13px;
+    column-gap: 10px;
+  }
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
     row-gap: 2vw;
     column-gap: 1.5vw;
   }
