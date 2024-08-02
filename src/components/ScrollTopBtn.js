@@ -1,8 +1,6 @@
-import { HiArrowUpCircle } from "react-icons/hi2";
 import styled from "styled-components";
 import { color } from "../GlobalStyled";
 import { HiOutlineArrowCircleUp } from "react-icons/hi";
-import { FaLongArrowAltUp } from "react-icons/fa";
 
 const TopBtn = styled.div`
   position: fixed; // fixed 해야 브라우저 기준으로 right bottom 값이 스크롤을 내려도 지속됨
@@ -12,6 +10,11 @@ const TopBtn = styled.div`
   cursor: pointer;
   font-size: 60px;
   color: ${color.point};
+  @media screen and (max-width: 800px) {
+    font-size: 7vw;
+    bottom: 20px;
+    right: 20px;
+  }
 `;
 
 export const ScrollTopBtn = () => {
