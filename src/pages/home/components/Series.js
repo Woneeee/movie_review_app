@@ -8,6 +8,10 @@ import { W500_URL } from "../../../constant/imgUrl";
 const Container = styled.div`
   padding: 50px 0 50px ${spacing.side};
 
+  @media screen and (max-width: 1000px) {
+    padding: 40px 0 40px ${spacing.side};
+  }
+
   @media screen and (max-width: 768px) {
     padding: 30px 0 30px ${spacing.moside};
   }
@@ -22,28 +26,37 @@ const STitle = styled.div`
   font-weight: 700;
   margin-bottom: 30px;
 
+  @media screen and (max-width: 1000px) {
+    font-size: 33px;
+    margin-bottom: 25px;
+  }
+
   @media screen and (max-width: 768px) {
-    font-size: 25px;
-    margin-bottom: 15px;
+    font-size: 28px;
+    margin-bottom: 20px;
   }
 
   @media screen and (max-width: 376px) {
     font-size: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 `;
 
 const params = {
   slidesPerView: 7.3,
-  spaceBetween: 20,
+  spaceBetween: 15,
   breakpoints: {
-    1024: {
+    1300: {
       slidesPerView: 7.3,
-      spaceBetween: 20,
+      spaceBetween: 15,
+    },
+    1024: {
+      slidesPerView: 5.3,
+      spaceBetween: 15,
     },
     640: {
       slidesPerView: 4.3,
-      spaceBetween: 15,
+      spaceBetween: 13,
     },
     320: {
       slidesPerView: 3.3,
