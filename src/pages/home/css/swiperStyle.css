@@ -1,0 +1,11 @@
+.swiper-slide {
+  height: 350px;
+  @media screen and (max-width: 500px) {
+    height: 190px;
+  }
+}
+
+.swiper-slide img {
+  height: 100%;
+  object-fit: cover;
+}

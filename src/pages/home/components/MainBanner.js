@@ -118,17 +118,20 @@ const Button = styled.div`
 
 export const MainBanner = ({ data }) => {
   return (
-    <Container $bgUrl={ORIGIN_URL + data.backdrop_path}>
-      <BlackBg />
+    <Link to={`/moviedetail/${data.id}`}>
+      <Container $bgUrl={ORIGIN_URL + data.backdrop_path}>
+        <BlackBg />
 
-      <Info>
-        <span>Today's Trend</span>
-        <h3>{data.title}</h3>
-        <p>{data.overview.slice(0, 100) + "..."}</p>
-        <Button>
-          <Link to={`/moviedetail/${data.id}`}>상세 정보</Link>
-        </Button>
-      </Info>
-    </Container>
+        <Info>
+          <span>Today's Trend</span>
+          <h3>{data.title}</h3>
+          <p>{data.overview.slice(0, 100) + "..."}</p>
+
+          <Link to={`/moviedetail/${data.id}`}>
+            <Button>상세 정보</Button>
+          </Link>
+        </Info>
+      </Container>
+    </Link>
   );
 };

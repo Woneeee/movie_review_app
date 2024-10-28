@@ -3,6 +3,7 @@ import { spacing } from "../../../GlobalStyled";
 import { W500_URL } from "../../../constant/imgUrl";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
+import "../css/swiperStyle.css";
 
 const Container = styled.div`
   padding: 50px 0 50px ${spacing.side};
