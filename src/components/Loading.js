@@ -12,7 +12,7 @@ const Container = styled.div`
 export const Loading = () => {
   return (
     <Container>
-      <PuffLoader color="#e50914" size={45} />
+      <PuffLoader color="#e50914" size={70} />
     </Container>
   );
 };

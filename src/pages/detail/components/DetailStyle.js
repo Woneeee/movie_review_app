@@ -15,6 +15,13 @@ export const ConWrap = styled.div`
   @media screen and (max-width: 1200px) {
     width: 70%;
   }
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    padding: 0 ${spacing.moside};
+    flex-direction: column;
+    margin-top: 80px;
+  }
 `;
 
 export const PosterWrap = styled.div`
@@ -22,6 +29,11 @@ export const PosterWrap = styled.div`
   img {
     height: 100%;
     object-fit: cover;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    height: 280px;
   }
 `;
 
@@ -42,6 +54,15 @@ export const InfoWrap = styled.div`
     h3 {
       font-size: 35px;
       margin-bottom: 2vw;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    position: relative;
+    h3 {
+      font-size: 25px;
+      margin-top: 15px;
+      margin-bottom: 15px;
     }
   }
 `;
@@ -71,6 +92,15 @@ export const Info = styled.div`
       margin-right: 0.7vw;
     }
   }
+  @media screen and (max-width: 500px) {
+    span {
+      font-size: 15px;
+      padding: 0 15px;
+      line-height: 45px;
+      margin-right: 10px;
+      font-weight: 500;
+    }
+  }
 `;
 
 export const Button = styled.div`
@@ -95,6 +125,12 @@ export const Button = styled.div`
     width: 8vw;
     font-size: 14px;
   }
+  @media screen and (max-width: 500px) {
+    width: 110px;
+    height: 45px;
+    font-size: 16px;
+    font-weight: 500;
+  }
 `;
 
 export const Genres = styled.div`
@@ -114,6 +150,20 @@ export const Genres = styled.div`
     li {
       font-size: 14px;
       margin-top: 0.5vw;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    display: flex;
+    margin-top: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid white;
+    opacity: 0.7;
+    li {
+      font-size: 16px;
+      list-style: none;
+      margin-right: 10px;
+      font-weight: 500;
+      margin-top: 5px;
     }
   }
 `;
@@ -138,6 +188,10 @@ export const Keyword = styled.div`
   @media screen and (max-width: 1000px) {
     font-size: 12px;
   }
+  @media screen and (max-width: 500px) {
+    font-size: 15px;
+    margin-top: 20px;
+  }
 `;
 
 export const Desc = styled.div`
@@ -155,6 +209,10 @@ export const Desc = styled.div`
   @media screen and (max-width: 1000px) {
     font-size: 14px;
     line-height: 18px;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 15px;
+    line-height: 22px;
   }
 `;
 
@@ -180,7 +238,11 @@ export const Recommand = styled.div`
     }
   }
   @media screen and (max-width: 500px) {
-    padding: 0 ${spacing.moside};
+    padding: 15px ${spacing.moside};
+    h3 {
+      font-size: 17px;
+      line-height: 30px;
+    }
   }
 `;
 
