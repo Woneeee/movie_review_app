@@ -17,6 +17,11 @@ const STitle = styled.div`
     padding: 100px ${spacing.moside} 80px ${spacing.moside};
     font-size: 40px;
   }
+  @media screen and (max-width: 500px) {
+    font-size: 30px;
+    line-height: 40px;
+    padding: 100px ${spacing.moside} 38px ${spacing.moside};
+  }
 `;
 
 const Container = styled.div`
@@ -31,6 +36,12 @@ const Container = styled.div`
     padding: 0 ${spacing.moside};
     h3 {
       font-size: 20px;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    h3 {
+      font-size: 18px;
+      margin-bottom: 16px;
     }
   }
 `;
@@ -49,6 +60,10 @@ const ConWrap = styled.div`
     grid-template-columns: repeat(2, 1fr);
     row-gap: 10px;
     column-gap: 10px;
+  }
+  @media screen and (max-width: 500px) {
+    row-gap: 8px;
+    column-gap: 8px;
   }
 `;
 
