@@ -106,7 +106,7 @@ export const Info = styled.div`
   @media screen and (max-width: 500px) {
     span {
       font-size: 15px;
-      padding: 0 15px;
+      padding: 0 10px;
       line-height: 45px;
       margin-right: 10px;
       font-weight: 500;
@@ -137,7 +137,7 @@ export const Button = styled.div`
     font-size: 14px;
   }
   @media screen and (max-width: 500px) {
-    width: 110px;
+    width: 100px;
     height: 45px;
     font-size: 16px;
     font-weight: 500;
