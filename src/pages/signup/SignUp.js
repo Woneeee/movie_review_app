@@ -78,7 +78,7 @@ export const SignUp = () => {
         <button>가입</button>
 
         <GoSIgnUp>
-          이미 YEAHFLIX 회원인가요? 지금
+          이미 YEAHFLIX 회원인가요? 지금 &nbsp;
           <Link to={routes.signin}>로그인</Link> 하세요 😊
         </GoSIgnUp>
       </Form>

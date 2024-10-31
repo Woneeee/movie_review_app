@@ -31,9 +31,20 @@ export const PosterWrap = styled.div`
     object-fit: cover;
   }
 
+  .mo_img {
+    display: none;
+  }
+
   @media screen and (max-width: 500px) {
     width: 100%;
     height: 280px;
+
+    .img {
+      display: none;
+    }
+    .mo_img {
+      display: block;
+    }
   }
 `;
 
@@ -308,6 +319,14 @@ export const Video = styled.div`
   }
   @media screen and (max-width: 768px) {
     padding: 300px 0 0 0;
+  }
+  @media screen and (max-width: 500px) {
+    padding: 150px 0 0 0;
+    iframe {
+      width: 90%;
+      height: 34%;
+      transform: translate(-50%, -60%);
+    }
   }
 `;
 

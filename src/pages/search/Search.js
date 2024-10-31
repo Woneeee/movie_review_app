@@ -14,6 +14,10 @@ const Container = styled.div`
   @media screen and (max-width: 768px) {
     padding: 130px ${spacing.moside};
   }
+
+  @media screen and (max-width: 500px) {
+    padding: 100px ${spacing.moside};
+  }
 `;
 
 const Form = styled.form`

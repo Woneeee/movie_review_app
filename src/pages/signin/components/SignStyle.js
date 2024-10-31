@@ -9,6 +9,8 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 0;
 `;
 
 export const BackBG = styled.div`
@@ -22,6 +24,7 @@ export const BackBG = styled.div`
   position: absolute;
   top: 0;
   left: 0;
+  z-index: -99;
 `;
 
 export const Form = styled.form`
@@ -45,10 +48,11 @@ export const Form = styled.form`
     background-color: rgba(68, 68, 68, 0.4);
     margin-bottom: 10px;
     border-radius: 3px;
+    padding: 0 20px;
+    box-sizing: border-box;
     &::placeholder {
       font-size: 18px;
       font-weight: 600;
-      padding: 0 20px;
     }
   }
 
@@ -67,20 +71,21 @@ export const Form = styled.form`
   @media screen and (max-width: 500px) {
     width: 340px;
     height: 600px;
-    padding: 60px 40px;
+    padding: 60px 20px;
     h3 {
       font-size: 30px;
       margin-bottom: 40px;
     }
     input {
-      height: 40px;
-      margin-bottom: 8px;
+      height: 45px;
+      margin-bottom: 5px;
+      padding: 0 15px;
       &::placeholder {
         font-size: 16px;
       }
     }
     button {
-      height: 45px;
+      height: 50px;
       margin-top: 23px;
       font-size: 17px;
     }

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { keywordMovie, movieDetail, previewMovie, recomMovie } from "../../api";
 import { Loading } from "../../components/Loading";
-import { W500_URL } from "../../constant/imgUrl";
+import { ORIGIN_URL, W500_URL } from "../../constant/imgUrl";
 import { Title } from "../../components/Title";
 import { Link, useParams } from "react-router-dom";
 import { useScrollTop } from "../../lib/useScrollTop";
@@ -93,7 +93,20 @@ export const MovieDetail = () => {
             <ConWrap>
               <PosterWrap>
                 {detail.poster_path ? (
-                  <img src={W500_URL + detail.poster_path} alt={detail.title} />
+                  <img
+                    className="img"
+                    src={W500_URL + detail.poster_path}
+                    alt={detail.title}
+                  />
+                ) : (
+                  <img src={noImage} alt={detail.title} />
+                )}
+                {detail.backdrop_path ? (
+                  <img
+                    className="mo_img"
+                    src={ORIGIN_URL + detail.backdrop_path}
+                    alt={detail.title}
+                  />
                 ) : (
                   <img src={noImage} alt={detail.title} />
                 )}
