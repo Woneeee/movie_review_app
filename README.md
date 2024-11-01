@@ -8,7 +8,7 @@
 
 ### 기술 stack:
 
-<img src="https://e7.pngegg.com/pngimages/87/538/png-clipart-javascript-scalable-graphics-logo-encapsulated-postscript-javascript-icon-text-logo-thumbnail.png" width="30px" height="30px" />
+<img src="https://e7.pngegg.com/pngimages/87/538/png-clipart-javascript-scalable-graphics-logo-encapsulated-postscript-javascript-icon-text-logo-thumbnail.png" width="50px" height="50px" />
 - node.js, react, js, html, css, git, github
 
 ### 개발기간
