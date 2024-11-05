@@ -33,6 +33,7 @@ export const GlobalStyled = createGlobalStyle`
     img{
         width: 100%;
         display: block;
+        
     }
 
     li{

@@ -45,12 +45,8 @@
 
   - TMDB - https://www.themoviedb.org/?language=ko
 
-<div display="flex"  >
-  <img src="./src//mo_app/Main.png" width="180px" display="block" />
-  <img src="./src//mo_app/Detail.png" width="180px" display="block" />
-  <img src="./src//mo_app/Keyword.png" width="180px" display="block" />
-  <img src="./src//mo_app/Search.png" width="180px" display="block" />
-  <img src="./src//mo_app/Login.png" width="180px" display="block" />
+<div display="flex" >
+  <img src="./src/mo_app/Main.png" width="180px" height="500px" object-fit="cover" />
 </div>
 
 - 또한 유저가 웹사이트에서 조금 더 능동적으로 활동할 수 있도록 로그인,회원가입, 추천, 검색 시스템을 구축하였습니다. 실제와 비슷한 로그인 시스템을 만들 수 있도록 회원가입한 유저의 정보를 localStorage에 저장하여 정보가 일치하다면 로그인이 가능하도록 합니다. 또한 로그인 후 헤더의 로그인 아이콘이 로그아웃으로 바뀌며 로그아웃을 눌렀을때 localStorage에 있던 정보가 삭제 되는 특징이 있습니다.
