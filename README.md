@@ -1,6 +1,6 @@
 # YEAHFLIX | Movie Info & Recommandation App
 
-## 목적성:
+## 목적성
 
 - 요즘에는 저를 포함한 많은 사람들이 영화관에서 영화를 감상하는 것뿐만 아니라 'OTT 서비스' 를 제공하는 넷플릭스, 디즈니 플러스, 왓챠플레이 와 같은 플랫폼을 구독하여 더욱 영화를 쉽게 접근할 수 있는 것 같습니다.
 
@@ -8,7 +8,7 @@
 
 - 따라서, 저는 영화 소개 및 추천 어플리케이션이 있었으면 좋겠다고 생각을 했습니다. 최근 인기 및 트렌드 영화를 한 눈에 보며 새로운 정보를 얻고, 관련 영화 또는 줄거리의 키워드를 통한 비슷한 영화 추천을 받아 자신이 현재 보고싶은 영화가 무엇인지 찾는데에 더욱 유용하고 편리하게 사용할 수 있도록 어플을 제작하면 좋을 것 같다고 생각하여 제작하게 되었습니다.
 
-## stack:
+## stack
 
 <div display="flex">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/800px-Unofficial_JavaScript_logo_2.svg.png" width="60px" />
