@@ -46,11 +46,11 @@
 - 모바일 이미지
 
 <div display="flex" >
-  <img src="./src/mo_app/Main.png" width="180px"  />
-  <img src="./src/mo_app/Detail.png" width="180px"  />
-  <img src="./src/mo_app/Keyword.png" width="180px"  />
-  <img src="./src/mo_app/Search.png" width="180px"  />
-  <img src="./src/mo_app/Login.png" width="180px"  />
+  <img src="./src/mo_app/main.jpg" width="180px"  />
+  <img src="./src/mo_app/detail.jpg" width="180px"  />
+  <img src="./src/mo_app/keyword.jpg" width="180px"  />
+  <img src="./src/mo_app/search.jpg" width="180px"  />
+  <img src="./src/mo_app/login.jpg" width="180px"  />
 </div>
 
 ## 프로젝트를 하며 느낀점
